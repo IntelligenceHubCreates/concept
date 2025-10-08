@@ -1,103 +1,140 @@
+// app/page.tsx (Next.js 13+ App Router)
+// If using Pages Router, put inside pages/index.tsx
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="w-full">
+      {/* Gifts Banner */}
+      <section className="bg-white text-center py-10 relative">
+        <div className="flex justify-center">
+          <Image src="/apple-festival.png" alt="Apple Festival" width={80} height={80} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <h1 className="text-3xl font-bold mt-4">Gifts full of joy.</h1>
+        <p className="mt-2 text-gray-600">
+          Enjoy up to ₹10000 instant cashback on your favourite products with eligible cards.
+          Plus up to 12 months of No Cost EMI.*
+        </p>
+        <Link
+          href="#shop"
+          className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          Shop
+        </Link>
+      </section>
+
+      {/* iPhone 17 Pro */}
+      <section className="bg-black text-white text-center py-16">
+        <h2 className="text-4xl font-semibold">iPhone 17 Pro</h2>
+        <p className="mt-2">All out Pro.</p>
+        <div className="mt-6 flex justify-center gap-4">
+          <Link href="#" className="text-blue-400">Learn more</Link>
+          <Link href="#" className="text-blue-400">Buy</Link>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Image src="/iphone17pro.png" alt="iPhone 17 Pro" width={500} height={300} />
+        </div>
+      </section>
+
+      {/* iPhone Air */}
+      <section className="text-center py-16">
+        <h2 className="text-4xl font-semibold">iPhone Air</h2>
+        <p className="mt-2">The thinnest iPhone ever. With the power of pro inside.</p>
+        <div className="mt-6 flex justify-center gap-4">
+          <Link href="#" className="text-blue-600">Learn more</Link>
+          <Link href="#" className="text-blue-600">Buy</Link>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Image src="/iphone-air.png" alt="iPhone Air" width={500} height={150} />
+        </div>
+      </section>
+
+      {/* Grid of Products */}
+      <section className="grid md:grid-cols-2 gap-6 p-6">
+        {/* iPhone 17 */}
+        <div className="bg-gray-50 p-6 text-center rounded-xl">
+          <h3 className="text-2xl font-semibold">iPhone 17</h3>
+          <p className="text-gray-600">Megalithomatic.</p>
+          <div className="mt-4 flex justify-center gap-4">
+            <Link href="#" className="text-blue-600">Learn more</Link>
+            <Link href="#" className="text-blue-600">Buy</Link>
+          </div>
+          <Image src="/iphone17.png" alt="iPhone 17" width={200} height={400} className="mx-auto mt-6" />
+        </div>
+
+        {/* AirPods Pro 3 */}
+        <div className="bg-gray-50 p-6 text-center rounded-xl">
+          <h3 className="text-2xl font-semibold">AirPods Pro 3</h3>
+          <p className="text-gray-600">The world's best in-ear Active Noise Cancellation.</p>
+          <div className="mt-4 flex justify-center gap-4">
+            <Link href="#" className="text-blue-600">Learn more</Link>
+            <Link href="#" className="text-blue-600">Buy</Link>
+          </div>
+          <Image src="/airpodspro3.png" alt="AirPods Pro 3" width={250} height={250} className="mx-auto mt-6" />
+        </div>
+
+        {/* Watch Series 11 */}
+        <div className="bg-gray-50 p-6 text-center rounded-xl">
+          <h3 className="text-2xl font-semibold">Watch Series 11</h3>
+          <p className="text-gray-600">The ultimate fitness & health ally.</p>
+          <div className="mt-4 flex justify-center gap-4">
+            <Link href="#" className="text-blue-600">Learn more</Link>
+            <Link href="#" className="text-blue-600">Buy</Link>
+          </div>
+          <Image src="/watch11.png" alt="Watch Series 11" width={250} height={250} className="mx-auto mt-6" />
+        </div>
+
+        {/* Watch SE 3 */}
+        <div className="bg-gray-50 p-6 text-center rounded-xl">
+          <h3 className="text-2xl font-semibold">Watch SE 3</h3>
+          <p className="text-gray-600">Walk it. Talk it. Track it. Love it.</p>
+          <div className="mt-4 flex justify-center gap-4">
+            <Link href="#" className="text-blue-600">Learn more</Link>
+            <Link href="#" className="text-blue-600">Buy</Link>
+          </div>
+          <Image src="/watchse3.png" alt="Watch SE 3" width={250} height={250} className="mx-auto mt-6" />
+        </div>
+      </section>
+
+      {/* Watch Ultra 3 & Trade In */}
+      <section className="grid md:grid-cols-2 gap-6 p-6">
+        <div className="bg-black text-white p-6 text-center rounded-xl">
+          <h3 className="text-2xl font-semibold">Watch Ultra 3</h3>
+          <p className="text-gray-300">Personal beast.</p>
+          <div className="mt-4 flex justify-center gap-4">
+            <Link href="#" className="text-blue-400">Learn more</Link>
+            <Link href="#" className="text-blue-400">Buy</Link>
+          </div>
+          <Image src="/watchultra3.png" alt="Watch Ultra 3" width={250} height={250} className="mx-auto mt-6" />
+        </div>
+
+        <div className="bg-gray-50 p-6 text-center rounded-xl">
+          <h3 className="text-2xl font-semibold">Trade In</h3>
+          <p className="text-gray-600">Upgrade and save. It’s that easy.</p>
+          <div className="mt-4 flex justify-center gap-4">
+            <Link href="#" className="text-blue-600">Get your estimate</Link>
+          </div>
+          <Image src="/tradein.png" alt="Trade In" width={300} height={200} className="mx-auto mt-6" />
+        </div>
+      </section>
+
+      {/* TV+ Banner */}
+      <section className="bg-gray-100 py-10 text-center">
+        <div className="flex justify-center">
+          <Image src="/tvplus-banner.png" alt="Apple TV+" width={600} height={300} />
+        </div>
+        <p className="mt-4 text-gray-600">Comedy · Winner of 13 Emmy® Awards</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 text-sm text-gray-500 py-8 px-6">
+        <p>*Includes instant cashback and No Cost EMI.</p>
+        <p className="mt-4">
+          Copyright © 2025 Apple Inc. All rights reserved.
+        </p>
       </footer>
-    </div>
+    </main>
   );
 }
