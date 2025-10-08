@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
-type Frame = { src: string; size: string; width: number; height: number };
+type Frame = { src: string; size?: string; width: number; height: number;  };
 
 type Headings = {
   presenting?: string;
@@ -16,8 +16,8 @@ type Headings = {
 type Spec = {
   text: string;
   image?: string; // optional image for some specs
-  width: number; 
-  height: number;
+  width?: number; 
+  height?: number;
 };
 
 
@@ -25,7 +25,7 @@ type Product = {
   id: number | string;
   name: string;
   heroImage: string;
-  description: string[];
+  description: (string | undefined)[];
   frames: Frame[];
   headings?: Headings;
   video?: string;
@@ -184,43 +184,50 @@ export default function ProductClientPage({ product }: { product: Product }) {
 </section>
 
       {/* Technical Specs */}
-  {/* Technical Specifications */}
+{/* Technical Specifications */}
 {product.specs && product.specs.length > 0 && (
   <section className="bg-gray-50 py-12 px-6">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
         {product.headings?.technical || "Technical Specifications"}
       </h2>
 
-      <ul className="space-y-10">
+      <ul className="space-y-6 text-gray-800">
         {product.specs.map((spec, i) => (
           <li
             key={i}
-            className="flex flex-col md:flex-row md:items-start gap-6 border-b pb-8 last:border-none"
+            className="flex items-start gap-4 pb-2 last:border-none"
           >
-            {/* Text */}
-            <div className="flex-1">
-              <p className="text-gray-700 text-lg leading-relaxed">{spec.text}</p>
-            </div>
+            {/* Custom bullet */}
+            <span className="w-3 h-3 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
 
-            {/* Conditional Image */}
-            {spec.image && (
-              <div className="relative w-full md:w-64 h-48 rounded-lg overflow-hidden shadow-md">
-                <Image
-                  src={spec.image}
-                  alt={`Specification image ${i + 1} for ${product.name}`}
-                   width={spec.width || 400}
-  height={spec.height || 250}
-                  className="object-cover"
-                />
-              </div>
-            )}
+            {/* Text + optional image container */}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 w-full">
+              {/* Text */}
+              <p className="flex-1 text-lg leading-relaxed">{spec.text}</p>
+
+              {/* Conditional Image */}
+              {spec.image && (
+                <div className="relative w-48 h-32 flex-shrink-0">
+                  <Image
+                    src={spec.image}
+                    alt={`Specification image ${i + 1} for ${product.name}`}
+                    width={spec.width || 250}
+                    height={spec.height || 150}
+                    className="object-contain rounded-lg shadow-md"
+                  />
+                </div>
+              )}
+            </div>
           </li>
         ))}
       </ul>
     </div>
   </section>
 )}
+
+
+
 
 
 

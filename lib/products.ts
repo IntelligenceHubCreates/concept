@@ -575,5 +575,201 @@ export const products = [
   ],
   bottomImage: "",
   },
+  {
+    id: 15,
+  name: "35MM HDPC DOOR & FRAMES",
+  heroImage: "/35MMHDPCDOOR.png",
+  headings: {
+      presenting: "PRESENTING",
+      technical: "HDPC DOOR SPECIFICATION",
+      frame: "PVC FILM FINISHES:",
+    },
+  description: [
+    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    ,
+  ],
+  specs: [
+    {
+        text: "THICKNESS OF DOOR: 35MM",
+      },
+      {
+        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+      },
+      {
+        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
+        image: "/SPECIFICATION1.png", // optional
+        width: 500,
+    height: 300,
+      },
+      {
+        text: "HDPC FRAME SPECIFICATION",
+        image: "/SPECIFICATION2.png",
+        width: 300,
+    height: 200,
+
+      },
+      {
+        text: "HDPC ARCHITRAVE",
+        image: "/SPECIFICATION .png",
+        width: 300,
+    height: 200,
+
+      },
+  ],
+  frames: [
+    { src: "/Hdpc-options.jpg",
+      width: 400, 
+      height: 300,
+     },
+  ],
+  bottomImage: "",
+  },
+  {
+    id: 16,
+  name: "35MM HDPC DOOR & FRAMES",
+  heroImage: "/35MMHDPCDOOR.png",
+  headings: {
+      presenting: "PRESENTING",
+      technical: "HDPC DOOR SPECIFICATION",
+      frame: "PVC FILM FINISHES:",
+    },
+  description: [
+    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    ,
+  ],
+  specs: [
+    {
+        text: "THICKNESS OF DOOR: 35MM",
+      },
+      {
+        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+      },
+      {
+        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
+        image: "/SPECIFICATION1.png", // optional
+        width: 500,
+    height: 300,
+      },
+      {
+        text: "HDPC FRAME SPECIFICATION",
+        image: "/SPECIFICATION2.png",
+        width: 300,
+    height: 200,
+
+      },
+      {
+        text: "HDPC ARCHITRAVE",
+        image: "/SPECIFICATION .png",
+        width: 300,
+    height: 200,
+
+      },
+  ],
+  frames: [
+    { src: "/Hdpc-options.jpg",
+      width: 400, 
+      height: 300,
+     },
+  ],
+  bottomImage: "",
+  },
+  {
+    id: 17,
+  name: "35MM HDPC DOOR & FRAMES",
+  heroImage: "/35MMHDPCDOOR.png",
+  headings: {
+      presenting: "PRESENTING",
+      technical: "HDPC DOOR SPECIFICATION",
+      frame: "PVC FILM FINISHES:",
+    },
+  description: [
+    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    ,
+  ],
+  specs: [
+    {
+        text: "THICKNESS OF DOOR: 35MM",
+      },
+      {
+        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+      },
+      {
+        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
+        image: "/SPECIFICATION1.png", // optional
+        width: 500,
+    height: 300,
+      },
+      {
+        text: "HDPC FRAME SPECIFICATION",
+        image: "/SPECIFICATION2.png",
+        width: 300,
+    height: 200,
+
+      },
+      {
+        text: "HDPC ARCHITRAVE",
+        image: "/SPECIFICATION .png",
+        width: 300,
+    height: 200,
+
+      },
+  ],
+  frames: [
+    { src: "/Hdpc-options.jpg",
+      width: 400, 
+      height: 300,
+     },
+  ],
+  bottomImage: "",
+  },
+  {
+    id: 18,
+  name: "35MM HDPC DOOR & FRAMES",
+  heroImage: "/35MMHDPCDOOR.png",
+  headings: {
+      presenting: "PRESENTING",
+      technical: "HDPC DOOR SPECIFICATION",
+      frame: "PVC FILM FINISHES:",
+    },
+  description: [
+    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    ,
+  ],
+  specs: [
+    {
+        text: "THICKNESS OF DOOR: 35MM",
+      },
+      {
+        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+      },
+      {
+        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
+        image: "/SPECIFICATION1.png", // optional
+        width: 500,
+    height: 300,
+      },
+      {
+        text: "HDPC FRAME SPECIFICATION",
+        image: "/SPECIFICATION2.png",
+        width: 300,
+    height: 200,
+
+      },
+      {
+        text: "HDPC ARCHITRAVE",
+        image: "/SPECIFICATION .png",
+        width: 300,
+    height: 200,
+
+      },
+  ],
+  frames: [
+    { src: "/Hdpc-options.jpg",
+      width: 400, 
+      height: 300,
+     },
+  ],
+  bottomImage: "",
+  },
 
 ];
