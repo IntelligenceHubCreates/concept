@@ -35,8 +35,8 @@ export const products = [
   video: "/videos/door-frame.mp4",
   },
   {
-    id: 2,
-  name: "WPC Door Frame",
+    id: 4,
+  name: "WPC SOLID WINDOW FRAMES",
   heroImage: "/WPCWindows.png",
   description: [
     "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems.",
@@ -75,7 +75,7 @@ export const products = [
   video: "/videos/door-frame.mp4",
   },
   {
-    id: 3,
+    id: 5,
   name: "(WPC) WOOD POLYMER COMPOSITE DOOR",
   heroImage: "/WPC-DOOR.png",
   headings: {
@@ -107,7 +107,7 @@ export const products = [
   bottomImage: "/CNC.png" ,
   },
   {
-    id: 4,
+    id: 12,
   name: "35MM HDPC DOOR & FRAMES",
   heroImage: "/35MMHDPCDOOR.png",
   headings: {
@@ -156,7 +156,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 5,
+    id: 16,
   name: "30MM SOLID HIGH DENSITY POLYMER COMPOSITE DOOR",
   heroImage: "/Hdpcoption1.png",
   headings: {
@@ -186,7 +186,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 6,
+    id: 10,
   name: "ANTIQUE GROOVING DOOR(MARBLE SERIES)",
   heroImage: "/Antique-grooving-door.png",
   headings: {
@@ -226,9 +226,10 @@ export const products = [
   frames: [
   ],
   bottomImage: "/Option-2.jpg",
+   pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
   },
   {
-    id: 7,
+    id: 14,
   name: "WPC DIGITAL DOOR",
   heroImage: "/Wpc-digital-door.png",
   headings: {
@@ -268,7 +269,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 8,
+    id: 7,
   name: "WPC GROOVING DOOR",
   heroImage: "/Wpc-Grooving-door.png",
   headings: {
@@ -314,7 +315,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 9,
+    id: 11,
   name: "WPC UV TEXTURE DOOR",
   heroImage: "/UV-TEXTURE-DOOR.jpg",
   headings: {
@@ -349,7 +350,7 @@ export const products = [
   bottomImage: "/UVTexture.jpg",
   },
   {
-    id: 10,
+    id: 3,
   name: "3D WPC BOARDS ",
   heroImage: "/WPC-3d-boards.png",
   headings: {
@@ -395,7 +396,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 11,
+    id: 6,
   name: "POLYGRANITE SHEET",
   heroImage: "/POLYGRANITESHEET.png",
   headings: {
@@ -440,7 +441,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 12,
+    id: 13,
   name: "DIGITAL WPC SHUTTERS",
   heroImage: "/DIGITAL-SHUTTERS.png",
   headings: {
@@ -478,7 +479,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 13,
+    id: 2,
   name: "35MM HDPC DOOR & FRAMES",
   heroImage: "/35MMHDPCDOOR.png",
   headings: {
@@ -527,7 +528,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 14,
+    id: 8,
   name: "35MM HDPC DOOR & FRAMES",
   heroImage: "/35MMHDPCDOOR.png",
   headings: {
@@ -625,7 +626,7 @@ export const products = [
   bottomImage: "",
   },
   {
-    id: 16,
+    id: 9,
   name: "35MM HDPC DOOR & FRAMES",
   heroImage: "/35MMHDPCDOOR.png",
   headings: {

@@ -95,21 +95,21 @@ type Product = {
 
 const products: Product[] = [
   { id:1 ,name: "WPC FRAMES", image: "/WPCFRAME.png" },
-  { id:2 ,name: "WPC WINDOWS", image: "/WPCWINDOWS.png" },
-  { id:3 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
-  { id:4 ,name: "HDPC DOOR", image: "/HDPCDOOR.png" },
-  { id:5 ,name: "35MM HDPC", image: "/35MMHDPC.png" },
-  { id:6 ,name: "DIGITAL DOOR", image: "/Wpc-digital-door.png" },
+  { id:4 ,name: "WPC WINDOWS", image: "/BAF.png" },
+  { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
+  { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.png" },
+  { id:12 ,name: "35MM HDPC", image: "/35MMHDPC.png" },
+  { id:14 ,name: "DIGITAL DOOR", image: "/Wpc-digital-door.png" },
   { id:7 ,name: "GROOVE DOOR", image: "/Groove-door.png" },
-  { id:8 ,name: "ANTIQUE GROOVE DOOR", image: "/AGD.jpg" },
-  { id:9 ,name: "TEXTURED DOOR", image: "/GREEKKEY.jpg" },
-  { id:10 ,name: "WPC DIGITAL SHUTTLE", image: "/DIGITAL-SHUTTERS.png" },
-  { id:11 ,name: "POLYGRANITE SHEETS", image: "/polygranet-SHEET.png" },
-  { id:12 ,name: "3D WPC BOARD", image: "/3dWPCBOARD.png" },
-  { id:13 ,name: "EXTERIOR LOUVERS", image: "/Exterior-louvers.png" },
-  { id:14 ,name: "EXTERIOR PILLERS", image: "/Pillar.png" },
+  { id:10 ,name: "ANTIQUE GROOVE DOOR", image: "/AGD.jpg" },
+  { id:11 ,name: "TEXTURED DOOR", image: "/GREEKKEY.jpg" },
+  { id:13 ,name: "WPC DIGITAL SHUTTRE", image: "/DIGITAL-SHUTTERS.png" },
+  { id:6 ,name: "POLYGRANITE SHEETS", image: "/polygranet-SHEET.png" },
+  { id:3 ,name: "3D WPC BOARD", image: "/3dWPCBOARD.png" },
+  { id:8 ,name: "EXTERIOR LOUVERS", image: "/Exterior-louvers.png" },
+  { id:9 ,name: "EXTERIOR PILLERS", image: "/Pillar.png" },
   { id:15 ,name: "WPC DIGITAL LOUVERS", image: "/WPCDIGITALLOUVERS.png" },
-  { id:16 ,name: "HDPC SHEETS", image: "/HDPCBOARD.png" },
+  { id:2 ,name: "HDPC SHEETS", image: "/HDPCBOARD.png" },
   { id:17 ,name: "WPC SHEETS", image: "/WPCDIGITALLOUVERS.png" },
   { id:18 ,name: "CELING PANEL", image: "/WPCDIGITALLOUVERS.png" },
 ];
@@ -139,8 +139,8 @@ const products: Product[] = [
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6 text-white font-medium relative">
-        <a href="#" className="hover:text-purple-300">Home</a>
-        <a href="#" className="hover:text-purple-300">About</a>
+        <a href="/" className="hover:text-purple-300">Home</a>
+        <a href="/about" className="hover:text-purple-300">About</a>
           <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -161,8 +161,8 @@ const products: Product[] = [
         )}
       </div>
         <a href="#" className="hover:text-purple-300">Gallery</a>
-        <a href="#" className="hover:text-purple-300">FAQs</a>
-        <a href="#" className="hover:text-purple-300">Contact</a>
+        <a href="/faqs" className="hover:text-purple-300">FAQs</a>
+        <a href="/contact" className="hover:text-purple-300">Contact</a>
         <a href="#" className="hover:text-purple-300">Catalogue</a>
       </nav>
 
@@ -204,8 +204,8 @@ const products: Product[] = [
       {/* Mobile Menu (Dropdown) */}
       {menuOpen && (
         <nav className="absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-indigo-900 flex flex-col items-center gap-4 py-6 text-white md:hidden shadow-lg z-50">
-          <a href="#" className="hover:text-purple-300">Home</a>
-           <a href="#" className="hover:text-purple-300">About</a>
+          <a href="/" className="hover:text-purple-300">Home</a>
+           <a href="/about" className="hover:text-purple-300">About</a>
             <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -226,8 +226,8 @@ const products: Product[] = [
         )}
       </div>
          <a href="#" className="hover:text-purple-300">Gallery</a>
-        <a href="#" className="hover:text-purple-300">FAQs</a>
-        <a href="#" className="hover:text-purple-300">Contact</a>
+        <a href="/faqs" className="hover:text-purple-300">FAQs</a>
+        <a href="/contact" className="hover:text-purple-300">Contact</a>
         <a href="#" className="hover:text-purple-300">Catalogue</a>
         </nav>
       )}

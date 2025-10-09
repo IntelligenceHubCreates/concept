@@ -32,6 +32,7 @@ type Product = {
   bottomImage?: string;
   image?: string;
   specs?: Spec[];
+  pdf?: string;
 };
 
 export default function ProductClientPage({ product }: { product: Product }) {
@@ -174,7 +175,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
     {product.headings?.presenting || "PRESENTING"}
   </h2>
   <h3 className="text-2xl md:text-3xl font-bold text-purple-900 mb-6">
-    HIGH DENSITY WPC SOLID {product.name.toUpperCase()}
+     {product.name.toUpperCase()}
   </h3>
   {product.description.map((para, i) => (
     <p key={i} className="text-gray-700 leading-relaxed mb-6">
@@ -296,7 +297,36 @@ export default function ProductClientPage({ product }: { product: Product }) {
       </div>
     </div>
   </section>
+
+  
 )}
+{/* PDF Download Section */}
+{product.pdf && (
+  <section className="text-center py-12 bg-gray-50">
+    <a
+      href={product.pdf}
+      download
+      className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-700 to-indigo-800 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+        />
+      </svg>
+      Download Product PDF
+    </a>
+  </section>
+)}
+
 
     </main>
   );
