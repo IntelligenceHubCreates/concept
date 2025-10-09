@@ -2,6 +2,7 @@
 
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -11,9 +12,17 @@ type Headings = {
   presenting?: string;
   technical?: string;
   frame?: string;
+  available?: string;
 };
 
 type Spec = {
+  text: string;
+  image?: string; // optional image for some specs
+  width?: number; 
+  height?: number;
+};
+
+type Spec1 = {
   text: string;
   image?: string; // optional image for some specs
   width?: number; 
@@ -32,6 +41,7 @@ type Product = {
   bottomImage?: string;
   image?: string;
   specs?: Spec[];
+  specs1?: Spec1[];
   pdf?: string;
 };
 
@@ -56,13 +66,13 @@ export default function ProductClientPage({ product }: { product: Product }) {
       <header className="flex items-center justify-between px-4 bg-transparent py-1 absolute top-0 left-0 w-full z-50">
       {/* Logo */}
       <div className="flex items-center">
-        <Image src="/logo.png" alt="Concept Logo" width={120} height={40} />
+        <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
       </div>
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6 text-white font-medium relative">
-        <a href="#" className="hover:text-purple-300">Home</a>
-        <a href="#" className="hover:text-purple-300">About</a>
+        <Link href="/" className="hover:text-purple-300">Home</Link>
+        <Link href="/about" className="hover:text-purple-300">About</Link>
           <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -75,17 +85,20 @@ export default function ProductClientPage({ product }: { product: Product }) {
         </button>
         {isOpen && (
           <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Frames</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Digital Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">3D WPC Boards</a>
+           <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
           </div>
         )}
       </div>
         <a href="#" className="hover:text-purple-300">Gallery</a>
-        <a href="#" className="hover:text-purple-300">FAQs</a>
-        <a href="#" className="hover:text-purple-300">Contact</a>
-        <a href="#" className="hover:text-purple-300">Catalogue</a>
+        <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
+        <Link href="/contact" className="hover:text-purple-300">Contact</Link>
+        <Link href="#" className="hover:text-purple-300">Catalogue</Link>
       </nav>
 
       {/* Icons + Mobile Menu Button */}
@@ -126,8 +139,8 @@ export default function ProductClientPage({ product }: { product: Product }) {
       {/* Mobile Menu (Dropdown) */}
       {menuOpen && (
         <nav className="absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-indigo-900 flex flex-col items-center gap-4 py-6 text-white md:hidden shadow-lg z-50">
-          <a href="#" className="hover:text-purple-300">Home</a>
-           <a href="#" className="hover:text-purple-300">About</a>
+          <Link href="/" className="hover:text-purple-300">Home</Link>
+           <Link href="/about" className="hover:text-purple-300">About</Link>
             <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -140,17 +153,20 @@ export default function ProductClientPage({ product }: { product: Product }) {
         </button>
         {isOpen && (
           <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Frames</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Digital Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">3D WPC Boards</a>
+         <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
           </div>
         )}
       </div>
          <a href="#" className="hover:text-purple-300">Gallery</a>
-        <a href="#" className="hover:text-purple-300">FAQs</a>
-        <a href="#" className="hover:text-purple-300">Contact</a>
-        <a href="#" className="hover:text-purple-300">Catalogue</a>
+        <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
+        <Link href="/contact" className="hover:text-purple-300">Contact</Link>
+        <Link href="#" className="hover:text-purple-300">Catalogue</Link>
         </nav>
       )}
     </header>
@@ -160,7 +176,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           src={product.heroImage}
           alt={product.name}
           fill
-          className="object-cover opacity-70"
+          className="max-w-full max-h-full object-contain opacity-70"
         />
        {/*} <div className="absolute z-10 text-center px-6">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
@@ -227,7 +243,47 @@ export default function ProductClientPage({ product }: { product: Product }) {
   </section>
 )}
 
+{/* Available Specifications */}
+{product.specs1 && product.specs1.length > 0 && (
+  <section className="bg-gray-50 py-12 px-6">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
+        {product.headings?.available || "Technical Specifications"}
+      </h2>
 
+      <ul className="space-y-6 text-gray-800">
+        {product.specs1.map((spec, i) => (
+          <li
+            key={i}
+            className="flex items-start gap-4 pb-2 last:border-none"
+          >
+            {/* Custom bullet */}
+            <span className="w-3 h-3 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
+
+            {/* Text + optional image container */}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 w-full">
+              {/* Text */}
+              <p className="flex-1 text-lg leading-relaxed">{spec.text}</p>
+
+              {/* Conditional Image */}
+              {spec.image && (
+                <div className="relative w-48 h-32 flex-shrink-0">
+                  <Image
+                    src={spec.image}
+                    alt={`Specification image ${i + 1} for ${product.name}`}
+                    width={spec.width || 250}
+                    height={spec.height || 150}
+                    className="object-contain rounded-lg shadow-md"
+                  />
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}
 
 
 
@@ -291,7 +347,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
             src={product.bottomImage || "/fallback-image.png"}
             alt={`${product.name} display`}
             fill
-            className="object-cover"
+            className="max-w-full max-h-full object-contain"
           />
         )}
       </div>

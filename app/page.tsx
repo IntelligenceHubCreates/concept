@@ -131,7 +131,7 @@ const products: Product[] = [
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Header */}
-      <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900">
+      <header className="flex items-center justify-between px-4 bg-transparent py-1 absolute top-0 left-0 w-full z-50">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -153,10 +153,13 @@ const products: Product[] = [
         </button>
         {isOpen && (
           <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Frames</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Digital Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">3D WPC Boards</a>
+           <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
           </div>
         )}
       </div>
@@ -218,10 +221,13 @@ const products: Product[] = [
         </button>
         {isOpen && (
           <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Frames</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Digital Doors</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">3D WPC Boards</a>
+         <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
+            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
           </div>
         )}
       </div>

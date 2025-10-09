@@ -1,3 +1,5 @@
+import { Video } from "lucide-react";
+
 // lib/products.ts
 export const products = [
   {
@@ -178,12 +180,12 @@ export const products = [
       },
   ],
   frames: [
-    { src: "/",
-      width: 400, 
-      height: 300,
+    { src: "/Ceiling-1.png",
+      width: 375, 
+      height: 100,
      },
   ],
-  bottomImage: "",
+  bottomImage: "/Ceiling-2.png",
   },
   {
     id: 10,
@@ -480,12 +482,12 @@ export const products = [
   },
   {
     id: 2,
-  name: "35MM HDPC DOOR & FRAMES",
-  heroImage: "/35MMHDPCDOOR.png",
+  name: "HDPC SHEETS",
+  heroImage: "/HDPC-BOARD.JPG",
   headings: {
       presenting: "PRESENTING",
-      technical: "HDPC DOOR SPECIFICATION",
-      frame: "PVC FILM FINISHES:",
+      technical: "Key Features",
+      available: "Available Sizes:",
     },
   description: [
     "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
@@ -493,83 +495,100 @@ export const products = [
   ],
   specs: [
     {
-        text: "THICKNESS OF DOOR: 35MM",
+        text: "100% Waterproof: Resistant to water damage, swelling, and warping.",
       },
       {
-        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+        text: "Termite & Borer Proof: Long-lasting protection against wood pests.",
       },
       {
-        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
-        image: "/SPECIFICATION1.png", // optional
-        width: 500,
-    height: 300,
+        text: "Flame Retardant: Enhanced safety with fire-resistant properties.",
       },
       {
-        text: "HDPC FRAME SPECIFICATION",
-        image: "/SPECIFICATION2.png",
-        width: 300,
-    height: 200,
-
+        text: "Shape Transformable: Easily bendable, machinable & customizable.",
       },
       {
-        text: "HDPC ARCHITRAVE",
-        image: "/SPECIFICATION .png",
-        width: 300,
-    height: 200,
-
+        text: "Digital Print Compatible: Smooth surface ideal for vibrant digital printing.",
+      },
+      {
+        text: "Anti-Rodent: Deters rodents from damaging the board.",
+      },
+      {
+        text: "Paintable Surface: Accepts paints and coatings beautifully.",
+      },
+      {
+        text: "CNC Routable: Perfect for detailed carving and grooving.",
+      },
+      {
+        text: "Overlay Laminate Friendly: Ideal for laminates and designer overlays.",
+      },
+      {
+        text: "Overlay Veneer & Varnishing: Can be veneered and finished with high-end varnishes.",
+      },
+      {
+        text: "Nailable & Screwable: Strong holding power for hardware fittings.",
+      },
+  ],
+  specs1: [
+    {
+        text: "Length: 8 feet / 2,438.4 mm",
+      },
+      {
+        text: "Width: 4 feet / 1,219.2 mm",
+      },
+      {
+        text: "Thickness: 0.7 inch / 18 mm",
       },
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
-      width: 400, 
-      height: 300,
-     },
   ],
-  bottomImage: "",
+  bottomImage: "/WPC-WARDROBE.png",
   },
   {
     id: 8,
-  name: "35MM HDPC DOOR & FRAMES",
-  heroImage: "/35MMHDPCDOOR.png",
+  name: "WPC EXTERIOR LOUVERS",
+  heroImage: "/Exterior-louvers1.png",
   headings: {
       presenting: "PRESENTING",
-      technical: "HDPC DOOR SPECIFICATION",
-      frame: "PVC FILM FINISHES:",
+      technical: "Key Features:",
+      available: "Available Sizes:",
+      frame: "Finish Options:",
     },
   description: [
-    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    "Enhance your building facade with WPC (Wood-Plastic Composite) Exterior Louvers — the perfect fusion of natural wood aesthetics and modern engineering. These louvers not only elevate architectural design but also offer long-lasting performance against weather, UV rays, and moisture."
     ,
   ],
   specs: [
     {
-        text: "THICKNESS OF DOOR: 35MM",
+        text: "Elegant Aesthetic: Natural wood-like finish enhances walls and ceilings, creating a luxurious ambiance.",
       },
       {
-        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+        text: "Durable & Water-Resistant: Unlike traditional wood, WPC louvers are resistant to moisture, warping, and termites — ideal for humid environments.",
       },
       {
-        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
-        image: "/SPECIFICATION1.png", // optional
-        width: 500,
-    height: 300,
+        text: "Eco-Friendly: Made from recycled wood and plastic, they are a sustainable alternative to traditional timber.",
       },
       {
-        text: "HDPC FRAME SPECIFICATION",
-        image: "/SPECIFICATION2.png",
-        width: 300,
-    height: 200,
+        text: "Low Maintenance: No need for frequent painting or polishing. Just wipe and enjoy the beauty.",
 
       },
+  ],
+  specs1: [
+    {
+        text: "Length: 10 feet / 3048 mm",
+      },
       {
-        text: "HDPC ARCHITRAVE",
-        image: "/SPECIFICATION .png",
-        width: 300,
-    height: 200,
+        text: "Width: 8.6 inch / 220 mm",
+      },
+      {
+        text: "Depth: 1 inch / 26 mm",
+      },
+      {
+        text: "Area Per Panel: 6.6 SQFT per panel",
 
       },
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
+    { src: "/Options.png",
       width: 400, 
       height: 300,
      },
@@ -578,47 +597,56 @@ export const products = [
   },
   {
     id: 15,
-  name: "35MM HDPC DOOR & FRAMES",
-  heroImage: "/35MMHDPCDOOR.png",
+  name: "WPC DIGITAL LOUVERS",
+  heroImage: "/Interior-digital-louvers.jpg",
   headings: {
       presenting: "PRESENTING",
-      technical: "HDPC DOOR SPECIFICATION",
-      frame: "PVC FILM FINISHES:",
+      technical: "Key Features:",
+      frame: "Available Sizes:",
     },
   description: [
-    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    "WPC Digital Louvers are a modern and innovative solution for window coverings, combining the durability and low maintenance of WPC (Wood Polymer Composite) material with the versatility of digital printing technology. These louvers are made from a composite of wood fibers and plastic polymers, resulting in a strong, weather-resistant product that is ideal for both interior and exterior use.",
+    "The standout feature of WPC digital louvers is their ability to be customized with high-resolution digital prints. This allows for a wide range of design options, from realistic wood grain patterns to vibrant colors and intricate designs, enabling homeowners and designers to achieve a unique aesthetic that complements their space.",
+    "Ideal for both residential and commercial applications, WPC digital louvers offer excellent resistance to moisture, termites, and warping, making them a low-maintenance and long-lasting choice for modern living spaces.",
     ,
   ],
   specs: [
     {
-        text: "THICKNESS OF DOOR: 35MM",
+        text: "Custom Digital Printing: Choose your own textures, patterns, colors, or branding elements. Options include wood grains, marble looks, abstract art, floral themes, or corporate identities.",
       },
       {
-        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+        text: "Versatile Interior Use: Ideal for feature walls, TV backdrops, reception areas, lounges, offices, showrooms, and more.",
       },
       {
-        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
-        image: "/SPECIFICATION1.png", // optional
-        width: 500,
-    height: 300,
+        text: "No Warping or Cracking: Unlike MDF or plywood, WPC remains stable over time and under varying indoor climates.",
       },
       {
-        text: "HDPC FRAME SPECIFICATION",
-        image: "/SPECIFICATION2.png",
-        width: 300,
-    height: 200,
-
+        text: "Smooth Finish Options: Available in matte, gloss, or textured laminates to suit every décor style.",
       },
       {
-        text: "HDPC ARCHITRAVE",
-        image: "/SPECIFICATION .png",
-        width: 300,
-    height: 200,
+        text: "Quick Installation: Lightweight and precision-cut panels ensure easy and fast mounting.",
+      },
+      {
+        text: "Sustainable & Non-Toxic: Made from eco-friendly recycled materials, making it safe for indoor environments.",
+      },
+],
+specs1: [
+    {
+        text: "Length: 10 feet / 3048 mm",
+      },
+      {
+        text: "Width: 8.6 inch / 220 mm",
+      },
+      {
+        text: "Depth: 1 inch / 26 mm",
+      },
+      {
+        text: "Area Per Panel: 6.6 SQFT per panel",
 
       },
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
+    { src: "/Digital-louvers.png",
       width: 400, 
       height: 300,
      },
@@ -627,147 +655,113 @@ export const products = [
   },
   {
     id: 9,
-  name: "35MM HDPC DOOR & FRAMES",
-  heroImage: "/35MMHDPCDOOR.png",
+  name: "WPC EXTERIOR PILLERS",
+  heroImage: "/Exterior-pillars.png",
   headings: {
       presenting: "PRESENTING",
-      technical: "HDPC DOOR SPECIFICATION",
-      frame: "PVC FILM FINISHES:",
+      available: "Available Sizes:",
+      
+      
     },
   description: [
-    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    "We concept WPC (Wood Polymer Composite) Exterior Pillars are a perfect blend of natural wood aesthetics and modern durability, designed to enhance the architectural appeal of any outdoor space. These pillars are crafted from a high-density composite material that combines wood fibers with durable plastic polymers, resulting in a product that is both strong and resistant to environmental factors.",
+    "The exterior pillars feature a realistic wood grain finish that adds warmth and elegance to patios, porches, garden structures, and entryways. Available in various styles and sizes, WPC exterior pillars can seamlessly complement different architectural designs, from classic to contemporary.",
+    "In addition to their aesthetic appeal, these pillars are also practical, offering excellent resistance to moisture, termites, and warping. Easy to install and maintain, WPC exterior pillars provide a long-lasting solution for enhancing the beauty and functionality of your outdoor living spaces.",
     ,
   ],
   specs: [
+  ],
+  specs1: [
     {
-        text: "THICKNESS OF DOOR: 35MM",
+        text: "Length: 10 feet",
       },
       {
-        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+        text: "Width: 5.9 inch",
       },
       {
-        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
-        image: "/SPECIFICATION1.png", // optional
-        width: 500,
-    height: 300,
-      },
-      {
-        text: "HDPC FRAME SPECIFICATION",
-        image: "/SPECIFICATION2.png",
-        width: 300,
-    height: 200,
-
-      },
-      {
-        text: "HDPC ARCHITRAVE",
-        image: "/SPECIFICATION .png",
-        width: 300,
-    height: 200,
-
+        text: "Depth: 1.9 inch",
       },
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
-      width: 400, 
-      height: 300,
-     },
   ],
-  bottomImage: "",
+  bottomImage: "/Pillar.png",
   },
   {
     id: 17,
-  name: "35MM HDPC DOOR & FRAMES",
-  heroImage: "/35MMHDPCDOOR.png",
+  name: "WPC SHEETS",
+  heroImage: "/WPC-BOARD.jpg",
   headings: {
       presenting: "PRESENTING",
-      technical: "HDPC DOOR SPECIFICATION",
+      technical: "KEY FEATURES",
       frame: "PVC FILM FINISHES:",
     },
   description: [
-    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    "WPC (Wood Polymer Composite) sheets are an innovative material crafted by combining wood fibers with thermoplastics. This unique blend results in a highly durable, eco-friendly, and versatile building solution. WPC sheets are increasingly preferred in modern architecture and interior design due to their aesthetic appeal and functional benefits."
     ,
   ],
   specs: [
     {
-        text: "THICKNESS OF DOOR: 35MM",
+        text: "100% Waterproof: Resistant to water damage, swelling, and warping.",
       },
       {
-        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
+        text: "Termite & Borer Proof: Long-lasting protection against wood pests.",
       },
       {
-        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
-        image: "/SPECIFICATION1.png", // optional
-        width: 500,
-    height: 300,
+        text: "Flame Retardant: Enhanced safety with fire-resistant properties.",
       },
       {
-        text: "HDPC FRAME SPECIFICATION",
-        image: "/SPECIFICATION2.png",
-        width: 300,
-    height: 200,
-
+        text: "Digital Print Compatible: Smooth surface ideal for vibrant digital printing.",
       },
       {
-        text: "HDPC ARCHITRAVE",
-        image: "/SPECIFICATION .png",
-        width: 300,
-    height: 200,
-
+        text: "Anti-Rodent: Deters rodents from damaging the board.",
+      },
+      {
+        text: "Paintable Surface: Accepts paints and coatings beautifully.",
+      },
+      {
+        text: "CNC Routable: Perfect for detailed carving and grooving.",
       },
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
-      width: 400, 
-      height: 300,
-     },
   ],
-  bottomImage: "",
+  video: "/videos/door-frame.mp4",
   },
   {
     id: 18,
-  name: "35MM HDPC DOOR & FRAMES",
-  heroImage: "/35MMHDPCDOOR.png",
+  name: "WPC CEILING SYSTEM",
+  heroImage: "/M7-1.png",
   headings: {
       presenting: "PRESENTING",
-      technical: "HDPC DOOR SPECIFICATION",
-      frame: "PVC FILM FINISHES:",
+      technical: "",
+      frame: "",
     },
   description: [
-    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    "WPC ceiling systems are an innovative and versatile solution for modern interior design, combining the aesthetic appeal of traditional ceiling materials with the durability and low maintenance of wood-plastic composite (WPC) technology. These systems are made from a blend of wood fibers and high-quality plastic polymers, resulting in a product that is both strong and resistant to moisture, termites, and warping.",
     ,
   ],
   specs: [
-    {
-        text: "THICKNESS OF DOOR: 35MM",
-      },
-      {
-        text: "AVAILABLE IN: RAW DOOR (paintable or paste Laminate) WOOD FINISH FILM COLORS WITH 0.26mm",
-      },
-      {
-        text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
-        image: "/SPECIFICATION1.png", // optional
-        width: 500,
-    height: 300,
-      },
-      {
-        text: "HDPC FRAME SPECIFICATION",
-        image: "/SPECIFICATION2.png",
-        width: 300,
-    height: 200,
-
-      },
-      {
-        text: "HDPC ARCHITRAVE",
-        image: "/SPECIFICATION .png",
-        width: 300,
-    height: 200,
-
-      },
+    
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
-      width: 400, 
-      height: 300,
+    { src: "/R8.png",
+      width: 200, 
+      height: 100,
+     },
+     { src: "/R8-1.png",
+      width: 200, 
+      height: 100,
+     },
+     { src: "/M7-2.png",
+      width: 200, 
+      height: 100,
+     },
+     { src: "/M7-3.png",
+      width: 200, 
+      height: 100,
+     },
+     { src: "/Ceiling-1.png",
+      width: 350, 
+      height: 150,
      },
   ],
   bottomImage: "",
