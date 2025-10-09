@@ -139,8 +139,8 @@ const products: Product[] = [
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6 text-white font-medium relative">
-        <a href="/" className="hover:text-purple-300">Home</a>
-        <a href="/about" className="hover:text-purple-300">About</a>
+        <Link href="/" className="hover:text-purple-300">Home</Link>
+        <Link href="/about" className="hover:text-purple-300">About</Link>
           <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -161,9 +161,9 @@ const products: Product[] = [
         )}
       </div>
         <a href="#" className="hover:text-purple-300">Gallery</a>
-        <a href="/faqs" className="hover:text-purple-300">FAQs</a>
-        <a href="/contact" className="hover:text-purple-300">Contact</a>
-        <a href="#" className="hover:text-purple-300">Catalogue</a>
+        <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
+        <Link href="/contact" className="hover:text-purple-300">Contact</Link>
+        <Link href="#" className="hover:text-purple-300">Catalogue</Link>
       </nav>
 
       {/* Icons + Mobile Menu Button */}
@@ -204,8 +204,8 @@ const products: Product[] = [
       {/* Mobile Menu (Dropdown) */}
       {menuOpen && (
         <nav className="absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-indigo-900 flex flex-col items-center gap-4 py-6 text-white md:hidden shadow-lg z-50">
-          <a href="/" className="hover:text-purple-300">Home</a>
-           <a href="/about" className="hover:text-purple-300">About</a>
+          <Link href="/" className="hover:text-purple-300">Home</Link>
+           <Link href="/about" className="hover:text-purple-300">About</Link>
             <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -226,9 +226,9 @@ const products: Product[] = [
         )}
       </div>
          <a href="#" className="hover:text-purple-300">Gallery</a>
-        <a href="/faqs" className="hover:text-purple-300">FAQs</a>
-        <a href="/contact" className="hover:text-purple-300">Contact</a>
-        <a href="#" className="hover:text-purple-300">Catalogue</a>
+        <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
+        <Link href="/contact" className="hover:text-purple-300">Contact</Link>
+        <Link href="#" className="hover:text-purple-300">Catalogue</Link>
         </nav>
       )}
     </header>

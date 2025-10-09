@@ -93,7 +93,7 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-700 text-white text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let's Build Something Beautiful Together
+          Let`&apos;`s Build Something Beautiful Together
         </h2>
         <p className="text-lg mb-8">
           Get in touch with our specialists to discuss your next project.
