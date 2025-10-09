@@ -32,7 +32,7 @@ export default function Home() {
   {
     id: "1",
     name: "WPC FRAMES",
-    image: "/WPCFRAME.PNG",
+    image: "/WPCFrame.PNG",
   },
   {
     id: "2",
@@ -94,7 +94,7 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id:1 ,name: "WPC FRAMES", image: "/WPCFRAME.PNG" },
+  { id:1 ,name: "WPC FRAMES", image: "/WPCFrame.PNG" },
   { id:4 ,name: "WPC WINDOWS", image: "/BAF.png" },
   { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
   { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.PNG" },
