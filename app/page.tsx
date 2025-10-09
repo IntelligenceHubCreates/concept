@@ -134,7 +134,7 @@ const products: Product[] = [
       <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900">
       {/* Logo */}
       <div className="flex items-center">
-        <Image src="/logo.png" alt="Concept logo" width={120} height={40} />
+        <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
       </div>
 
       {/* Desktop Menu */}
