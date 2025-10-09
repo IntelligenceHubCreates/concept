@@ -94,7 +94,7 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id:1 ,name: "WPC FRAMES", image: "/WPCFrame.PNG" },
+  { id:1 ,name: "WPC FRAMES", image: "/WPCFrame.png" },
   { id:4 ,name: "WPC WINDOWS", image: "/BAF.png" },
   { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
   { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.PNG" },
@@ -108,10 +108,10 @@ const products: Product[] = [
   { id:3 ,name: "3D WPC BOARD", image: "/3dWPCBOARD.png" },
   { id:8 ,name: "EXTERIOR LOUVERS", image: "/Exterior-louvers.png" },
   { id:9 ,name: "EXTERIOR PILLERS", image: "/Pillar.png" },
-  { id:15 ,name: "WPC DIGITAL LOUVERS", image: "/WPCDIGITALLOUVERS.png" },
+  { id:15 ,name: "WPC DIGITAL LOUVERS", image: "/Digital-louvers.png" },
   { id:2 ,name: "HDPC SHEETS", image: "/HDPCBOARD.png" },
   { id:17 ,name: "WPC SHEETS", image: "/WPCDIGITALLOUVERS.png" },
-  { id:18 ,name: "CELING PANEL", image: "/WPCDIGITALLOUVERS.png" },
+  { id:18 ,name: "CELING PANEL", image: "/R8.PNG" },
 ];
 
      const testimonials = [
