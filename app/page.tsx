@@ -32,7 +32,7 @@ export default function Home() {
   {
     id: "1",
     name: "WPC FRAMES",
-    image: "/WPCFrame.PNG",
+    image: "/WPCFrame.png",
   },
   {
     id: "2",
