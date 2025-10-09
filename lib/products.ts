@@ -39,7 +39,7 @@ export const products = [
   {
     id: 4,
   name: "WPC SOLID WINDOW FRAMES",
-  heroImage: "/WPCWindows.png",
+  heroImage: "/WPCWindows.PNG",
   description: [
     "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems.",
 
@@ -106,7 +106,7 @@ export const products = [
   ],
   frames: [
   ],
-  bottomImage: "/CNC.png" ,
+  bottomImage: "/CNC.PNG" ,
   },
   {
     id: 12,

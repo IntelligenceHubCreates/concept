@@ -262,17 +262,24 @@ const products: Product[] = [
       </h3>
 
       <div className="mt-4 flex justify-center items-center gap-2 text-sm text-gray-600">
-        <Image
-          src="/specialist.png"
-          alt="Specialist"
-          width={30}
-          height={30}
-          className="rounded-full"
-        />
-        <span>
-          Need shopping help? <b>Ask a Specialist</b>
-        </span>
-      </div>
+  <Image
+    src="/specialist.png"
+    alt="Specialist"
+    width={30}
+    height={30}
+    className="rounded-full"
+  />
+  <span>
+    Need shopping help?{" "}
+    <a
+      href="mailto:conceptdoorswindows@gmail.com?subject=Product%20Inquiry%20from%20Website"
+      className="font-semibold text-purple-600 hover:underline"
+    >
+      Ask a Specialist
+    </a>
+  </span>
+</div>
+
 
       {/* Swiper Product Slider */}
       <div className="mt-4">
@@ -359,7 +366,7 @@ const products: Product[] = [
         <SwiperSlide>
           <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
             <Image
-              src="/WPCFRAME.jpg"
+              src="/Antique-grooving-door.png"
               alt="WPC Splash"
               fill
               className="object-cover rounded-xl"
@@ -370,7 +377,7 @@ const products: Product[] = [
         <SwiperSlide>
           <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify- h-95">
             <Image
-              src="/WPCFRAME.jpg"
+              src="/Digital-louvers.png"
               alt="WPC Splash"
               fill
               className="object-cover rounded-xl"
@@ -381,7 +388,7 @@ const products: Product[] = [
         <SwiperSlide>
           <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
             <Image
-              src="/WPCFRAME.jpg"
+              src="/UV-TEXTURE-DOOR.jpg"
               alt="WPC Splash"
               fill
               className="object-cover rounded-xl"
@@ -392,7 +399,7 @@ const products: Product[] = [
         <SwiperSlide>
           <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
             <Image
-              src="/WPCFRAME.jpg"
+              src="/WPC-3d-boards.png"
               alt="WPC Splash"
               fill
               className="object-cover rounded-xl"
