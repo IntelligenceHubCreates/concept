@@ -111,7 +111,7 @@ const products: Product[] = [
   { id:15 ,name: "WPC DIGITAL LOUVERS", image: "/Digital-louvers.png" },
   { id:2 ,name: "HDPC SHEETS", image: "/HDPCBOARD.png" },
   { id:17 ,name: "WPC SHEETS", image: "/WPCDIGITALLOUVERS.png" },
-  { id:18 ,name: "CELING PANEL", image: "/R8.PNG" },
+  { id:18 ,name: "CELING PANEL", image: "/R8.png" },
 ];
 
      const testimonials = [
