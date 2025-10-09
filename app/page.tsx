@@ -32,7 +32,7 @@ export default function Home() {
   {
     id: "1",
     name: "WPC FRAMES",
-    image: "/WPCFRAME.png",
+    image: "/WPCFRAME.PNG",
   },
   {
     id: "2",
@@ -94,10 +94,10 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id:1 ,name: "WPC FRAMES", image: "/WPCFRAME.png" },
+  { id:1 ,name: "WPC FRAMES", image: "/WPCFRAME.PNG" },
   { id:4 ,name: "WPC WINDOWS", image: "/BAF.png" },
   { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
-  { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.png" },
+  { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.PNG" },
   { id:12 ,name: "35MM HDPC", image: "/35MMHDPC.png" },
   { id:14 ,name: "DIGITAL DOOR", image: "/Wpc-digital-door.png" },
   { id:7 ,name: "GROOVE DOOR", image: "/Groove-door.png" },
@@ -331,7 +331,7 @@ const products: Product[] = [
         <SwiperSlide>
           <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
             <Image
-              src="/WPCWindows.png"
+              src="/WPCWindows.PNG"
               alt="Window with Octopus"
               fill
               className="object-cover rounded-xl"
