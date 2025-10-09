@@ -98,7 +98,7 @@ const products: Product[] = [
   { id:4 ,name: "WPC WINDOWS", image: "/BAF.png" },
   { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
   { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.PNG" },
-  { id:12 ,name: "35MM HDPC", image: "/35MMHDPC.png" },
+  { id:12 ,name: "35MM HDPC", image: "/35mmhdpcdoor.jpg" },
   { id:14 ,name: "DIGITAL DOOR", image: "/Wpc-digital-door.png" },
   { id:7 ,name: "GROOVE DOOR", image: "/Groove-door.png" },
   { id:10 ,name: "ANTIQUE GROOVE DOOR", image: "/AGD.jpg" },
@@ -110,7 +110,7 @@ const products: Product[] = [
   { id:9 ,name: "EXTERIOR PILLERS", image: "/Pillar.png" },
   { id:15 ,name: "WPC DIGITAL LOUVERS", image: "/Digital-louvers.png" },
   { id:2 ,name: "HDPC SHEETS", image: "/HDPCBOARD.png" },
-  { id:17 ,name: "WPC SHEETS", image: "/WPCDIGITALLOUVERS.png" },
+  { id:17 ,name: "WPC SHEETS", image: "/WPCsheets.png" },
   { id:18 ,name: "CELING PANEL", image: "/R8.png" },
 ];
 
