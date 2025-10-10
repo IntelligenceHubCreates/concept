@@ -169,7 +169,7 @@ Specializing in designer doors, modern groove patterns, decorative finishes, and
       </section>
 
       {/* Vision & Mission */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-8">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
@@ -187,12 +187,12 @@ Specializing in designer doors, modern groove patterns, decorative finishes, and
       </section>
 
       {/* Our Values */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Our Core Values
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { title: "Innovation", desc: "Constantly evolving with modern materials and design." },
               { title: "Sustainability", desc: "Committed to eco-friendly production and processes." },
@@ -201,7 +201,7 @@ Specializing in designer doors, modern groove patterns, decorative finishes, and
             ].map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition"
+                className="bg-white rounded-2xl shadow-md p-4 hover:shadow-lg transition"
               >
                 <h4 className="font-semibold text-xl mb-2 text-gray-900">
                   {value.title}

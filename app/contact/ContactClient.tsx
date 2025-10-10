@@ -149,7 +149,7 @@ export default function ContactPage() {
       </div>
 
       {/* Main Grid */}
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid md:grid-cols-2 gap-12 bg-white">
         {/* Left Column — Info */}
         <div className="space-y-6">
           <div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right Column — Form */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 border">
+        <div className="bg-white rounded-2xl shadow-lg p-6 border">
           <form className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">

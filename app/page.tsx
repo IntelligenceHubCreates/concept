@@ -47,7 +47,7 @@ export default function Home() {
   {
     id: "4",
     name: "WPC WINDOWS",
-    image: "/BAF.png",
+    image: "/WPC-window.png",
   },
   {
     id: "5",
@@ -106,7 +106,7 @@ type Product = {
 
 const products: Product[] = [
   { id:1 ,name: "WPC FRAMES", image: "/WPCFrame.png" },
-  { id:4 ,name: "WPC WINDOWS", image: "/BAF.png" },
+  { id:4 ,name: "WPC WINDOWS", image: "/WPCWindows.PNG" },
   { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
   { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.PNG" },
   { id:12 ,name: "35MM HDPC", image: "/35mmhdpcdoor.jpg" },
@@ -142,7 +142,7 @@ const products: Product[] = [
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Header */}
-      <header className="flex items-center justify-between px-4 bg-transparent py-1 absolute top-0 left-0 w-full z-50">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900 relative top-0 left-0 w-full z-50">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />

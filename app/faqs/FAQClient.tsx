@@ -208,7 +208,7 @@ export default function FAQClient() {
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-6 text-gray-700 text-base leading-relaxed border-t border-gray-200">
+                <div className="px-6 py-4 text-gray-700 text-base leading-relaxed border-t border-gray-200">
                   {faq.answer}
                 </div>
               )}

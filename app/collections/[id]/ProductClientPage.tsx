@@ -327,10 +327,54 @@ export default function ProductClientPage({ product }: { product: Product }) {
     </section>
       )}
 
+      {/* PDF Download Section */}
+{product.pdf && (
+  <section className="px-10 py-10">
+    <a
+      href={product.pdf}
+      download
+      className="inline-flex flex-col items-center gap-1 group"
+    >
+      {/* PDF Icon */}
+      <div className="relative w-16 h-20 border-2 border-red-500 rounded-md flex flex-col items-center justify-center">
+        {/* Folded corner effect */}
+        <div className="absolute top-0 right-0 w-4 h-4 bg-red-500 clip-path-triangle"></div>
+
+        {/* PDF Label */}
+        <span className="absolute top-2 left-2 text-[10px] font-bold text-red-500 bg-white px-1 rounded">
+          PDF
+        </span>
+
+        {/* Download Arrow */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-red-500 group-hover:text-red-600 transition-colors"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 16l4-5h-3V4h-2v7H8l4 5z" />
+          <path d="M20 18H4v2h16v-2z" />
+        </svg>
+      </div>
+
+      <span className="mt-2 text-red-600 font-semibold text-sm">
+        Download PDF
+      </span>
+    </a>
+
+    {/* Custom folded-corner style */}
+    <style jsx>{`
+      .clip-path-triangle {
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
+    `}</style>
+  </section>
+)}
+
       {/* Video Section */}
       {/* Media Section (Video or Image) */}
 {(product.video || product.bottomImage) && (
-  <section className="bg-gradient-to-b from-purple-900 to-indigo-900 py-12">
+  <section className="bg-gradient-to-b from-purple-900 to-indigo-900 py-6">
     <div className="max-w-4xl mx-auto px-6 text-center">
       <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
         {product.video ? (
@@ -347,7 +391,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
             src={product.bottomImage || "/fallback-image.png"}
             alt={`${product.name} display`}
             fill
-            className="max-w-full max-h-full object-contain"
+            className="max-w-full max-h-full object-fit"
           />
         )}
       </div>
@@ -356,32 +400,9 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
   
 )}
-{/* PDF Download Section */}
-{product.pdf && (
-  <section className="text-center py-12 bg-gray-50">
-    <a
-      href={product.pdf}
-      download
-      className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-700 to-indigo-800 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
-        />
-      </svg>
-      Download Product PDF
-    </a>
-  </section>
-)}
+
+
+
 
 
     </main>
