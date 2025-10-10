@@ -85,12 +85,23 @@ export default function Home() {
     image: "/GREEKKEY.jpg",
   },
 ];
+
+
+// 🧱 Sample Data (replace with your real product array or fetch dynamically)
+const productsss: Product[] = [
+  { id: 4, name: "WPC Windows", image: "/WPCWindows.PNG" },
+  { id: 1, name: "WPC Frame", image: "/WPCFRAME.jpg" },
+  { id: 10, name: "Antique Grooving Door", image: "/Antique-grooving-door.png" },
+  { id: 15, name: "Digital Louvers", image: "/Digital-louvers.png" },
+  { id: 11, name: "UV Texture Door", image: "/UV-TEXTURE-DOOR.jpg" },
+  { id: 3, name: "WPC 3D Boards", image: "/WPC-3d-boards.png" },
+];
     
 
 type Product = {
   name: string;
   image: string;
-  id: number
+  id: number;
 };
 
 const products: Product[] = [
@@ -329,85 +340,35 @@ const products: Product[] = [
       <h3 className="text-lg font-bold">
         <span className="text-purple-700">The latest.</span> Discover what’s fresh and timeless
       </h3>
-
       <Swiper
         spaceBetween={16}
         slidesPerView={1.5}
         pagination={{ clickable: true }}
         modules={[Autoplay]}
+        autoplay={{
+          delay: 2500,
+        }}
         className="mt-4"
         breakpoints={{
-          640: { slidesPerView: 2 }, // 2 cards on tablet+
-          1024: { slidesPerView: 3 }, // 3 cards on desktop
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
       >
-        <SwiperSlide>
-          <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
-            <Image
-              src="/WPCWindows.PNG"
-              alt="Window with Octopus"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
-            <Image
-              src="/WPCFRAME.jpg"
-              alt="WPC Splash"
-               fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
-            <Image
-              src="/Antique-grooving-door.png"
-              alt="WPC Splash"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify- h-95">
-            <Image
-              src="/Digital-louvers.png"
-              alt="WPC Splash"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
-            <Image
-              src="/UV-TEXTURE-DOOR.jpg"
-              alt="WPC Splash"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center h-95">
-            <Image
-              src="/WPC-3d-boards.png"
-              alt="WPC Splash"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
-
-        {/* ➕ You can add more SwiperSlide items here */}
+        {productsss.map((product) => (
+          <SwiperSlide key={product.id}>
+            <Link
+              href={`/collections/${product.id}`}
+              className="block bg-gray-100 rounded-xl overflow-hidden relative h-96 group"
+            >
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
 

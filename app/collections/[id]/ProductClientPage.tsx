@@ -187,10 +187,10 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
       {/* Presenting Section */}
       <section className="max-w-6xl mx-auto px-6 py-12">
-  <h2 className="text-xl font-semibold text-gray-700 mb-4">
+  <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">
     {product.headings?.presenting || "PRESENTING"}
   </h2>
-  <h3 className="text-2xl md:text-3xl font-bold text-purple-900 mb-6">
+  <h3 className="text-2xl md:text-3xl font-bold text-purple-900 mb-6 text-center">
      {product.name.toUpperCase()}
   </h3>
   {product.description.map((para, i) => (
@@ -205,8 +205,8 @@ export default function ProductClientPage({ product }: { product: Product }) {
 {product.specs && product.specs.length > 0 && (
   <section className="bg-gray-50 py-12 px-6">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-        {product.headings?.technical || "Technical Specifications"}
+      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-10">
+        {product.headings?.technical || "Technical Specifications:"}
       </h2>
 
       <ul className="space-y-6 text-gray-800">
@@ -247,7 +247,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
 {product.specs1 && product.specs1.length > 0 && (
   <section className="bg-gray-50 py-12 px-6">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
+      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-10">
         {product.headings?.available || "Technical Specifications"}
       </h2>
 
@@ -291,7 +291,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
       {/* Frame Sizes */}
       {product.frames.length > 0 && (
   <section className="max-w-6xl mx-auto px-6 py-12">
-    <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+    <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-8">
       {product.headings?.frame || "FRAME SIZES"}
     </h2>
     <div className="flex flex-wrap justify-center gap-1">
