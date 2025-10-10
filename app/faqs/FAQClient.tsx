@@ -72,7 +72,7 @@ export default function FAQClient() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
       {/* Header */}
-      <header className="flex items-center justify-between px-4 bg-transparent py-1 absolute top-0 left-0 w-full z-50">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900 fixed top-0 left-0 w-full z-50 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -82,28 +82,28 @@ export default function FAQClient() {
       <nav className="hidden md:flex gap-6 text-white font-medium relative">
         <Link href="/" className="hover:text-purple-300">Home</Link>
         <Link href="/about" className="hover:text-purple-300">About</Link>
-          <div className="relative" ref={dropdownRef}>
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1 hover:text-purple-300 focus:outline-none"
-        >
-          Products
-          <ChevronDown
-            className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-          />
-        </button>
-        {isOpen && (
-          <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
-           <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
-          </div>
-        )}
-      </div>
+        <div className="relative" ref={dropdownRef}>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center gap-1 hover:text-purple-300 focus:outline-none"
+          >
+            Products
+            <ChevronDown
+              className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          {isOpen && (
+            <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
+              <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
+            </div>
+          )}
+        </div>
         <a href="#" className="hover:text-purple-300">Gallery</a>
         <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
         <Link href="/contact" className="hover:text-purple-300">Contact</Link>
@@ -145,39 +145,56 @@ export default function FAQClient() {
         </button>
       </div>
 
-      {/* Mobile Menu (Dropdown) */}
-      {menuOpen && (
-        <nav className="absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-indigo-900 flex flex-col items-center gap-4 py-6 text-white md:hidden shadow-lg z-50">
-          <Link href="/" className="hover:text-purple-300">Home</Link>
-           <Link href="/about" className="hover:text-purple-300">About</Link>
-            <div className="relative" ref={dropdownRef}>
+      {/* Mobile Menu (Slide from Right) */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-purple-900 to-indigo-900 transform ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out flex flex-col items-start pt-20 px-6 text-white shadow-lg md:hidden z-[1000]`}
+      >
+         {/* Close Button */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1 hover:text-purple-300 focus:outline-none"
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-4 right-4 text-white"
         >
-          Products
-          <ChevronDown
-            className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-          />
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
-        {isOpen && (
-          <div className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg w-44 z-50">
-         <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
-            <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
-          </div>
-        )}
+        <Link href="/" className="hover:text-purple-300 py-2">Home</Link>
+        <Link href="/about" className="hover:text-purple-300 py-2">About</Link>
+        <div className="relative w-full" ref={dropdownRef}>
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className="flex items-center gap-1 hover:text-purple-300 focus:outline-none py-2"
+  >
+    Products
+    <ChevronDown
+      className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+    />
+  </button>
+
+  <div
+    className={`mt-2 bg-gradient-to-r from-purple-900 to-indigo-900 text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
+      isOpen ? "max-h-96 opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-0"
+    }`}
+  >
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
+    <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
+  </div>
+</div>
+
+        <a href="#" className="hover:text-purple-300 py-2">Gallery</a>
+        <Link href="/faqs" className="hover:text-purple-300 py-2">FAQs</Link>
+        <Link href="/contact" className="hover:text-purple-300 py-2">Contact</Link>
+        <Link href="#" className="hover:text-purple-300 py-2">Catalogue</Link>
       </div>
-         <a href="#" className="hover:text-purple-300">Gallery</a>
-        <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
-        <Link href="/contact" className="hover:text-purple-300">Contact</Link>
-        <Link href="#" className="hover:text-purple-300">Catalogue</Link>
-        </nav>
-      )}
     </header>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 to-indigo-900 text-white py-24 text-center">
