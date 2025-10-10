@@ -30,7 +30,7 @@ export default function ContactPage() {
       };
     }, []);
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <section className="max-w-7xl mx-auto px-6 py-16 bg-white">
       {/* navbar */}
       <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900 absolute top-0 left-0 w-full z-50">
       {/* Logo */}
