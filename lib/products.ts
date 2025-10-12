@@ -82,7 +82,7 @@ export const products = [
   heroImage: "/WPC-DOOR.png",
   headings: {
       presenting: "PRESENTING",
-      technical: "Key Features",
+      technical: "Key Features:",
       frame: "PVC FILM FINISHES:",
     },
   description: [
@@ -106,6 +106,7 @@ export const products = [
   ],
   frames: [
   ],
+  pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
   bottomImage: "/CNC.PNG" ,
   },
   {
@@ -395,6 +396,7 @@ export const products = [
   ],
   frames: [
   ],
+  pdf: "/pdfs/WPC-3D-BOARDS.pdf",
   bottomImage: "",
   },
   {

@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+
 
 
 export default function Home() {
@@ -268,7 +270,12 @@ const products: Product[] = [
     </header>
 
       {/* Hero Banner */}
-      <section className="relative">
+      <motion.section
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative"
+      >
         <Image
           src="/ANTIQGROOVINGDOOR.png"
           alt="WPC Grooving Door"
@@ -276,14 +283,16 @@ const products: Product[] = [
           height={300}
           className="w-full"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black/40">
-          <h2 className="text-2xl font-bold"></h2>
-          <p className="text-sm"></p>
-        </div>
-      </section>
+      </motion.section>
 
       {/* Promo Section */}
-      <section className="px-4 py-8 text-center">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="px-4 py-8 text-center"
+      >
       <h3 className="text-2xl font-bold">
         <span className="text-purple-600">Store.</span> Gift your home timeless
         beauty this season.
@@ -310,7 +319,13 @@ const products: Product[] = [
 
 
       {/* Swiper Product Slider */}
-      <div className="mt-4">
+      <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-4"
+        >
         <Swiper
           spaceBetween={16}
           slidesPerView={3.5}
@@ -349,11 +364,17 @@ const products: Product[] = [
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
 
       {/* Latest Section */}
-      <section className="px-4">
+       
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+         className="px-4">
       <h3 className="text-lg font-bold">
         <span className="text-purple-700">The latest.</span> Discover what’s fresh and timeless
       </h3>
@@ -387,12 +408,18 @@ const products: Product[] = [
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </motion.section>
 
       {/* Customer Voice */}
-      <section className="px-4 py-6 bg-gray-50">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="px-4 py-6 bg-gray-50"
+      >
       <h3 className="text-lg font-bold text-purple-700">Customer Voice</h3>
-      <div className="mt-6">
+      
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
@@ -407,17 +434,28 @@ const products: Product[] = [
         >
           {testimonials.map((t, i) => (
             <SwiperSlide key={i}>
-              <div className="border border-dashed p-6 rounded-lg text-sm bg-white shadow-sm h-full flex flex-col justify-between">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                 className="border border-dashed p-6 mt-4 rounded-lg text-sm bg-white shadow-sm h-full flex flex-col justify-between">
                 <p>{t.text}</p>
                 <p className="mt-2 font-semibold">{t.author}</p>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-    </section>
+      
+    </motion.section>
 
-    <section className="px-6 py-10">
+     {/* Product Grid */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+         className="px-6 py-10"
+         >
       <h2 className="text-2xl font-bold text-center mb-8">Our Products</h2>
       <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {products.map((product, index) => (
@@ -439,7 +477,7 @@ const products: Product[] = [
           </Link>
         ))}
       </div>
-    </section>
+    </motion.section>
     </main>
   );
 }
