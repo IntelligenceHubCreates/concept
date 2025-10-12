@@ -143,8 +143,8 @@ const products: Product[] = [
   ];
   const images = [
     "/ANTIQGROOVINGDOOR.png",
-    "/WPC-RAFTERS.png",
-    "/WPC-WINDOW-HOME.png",
+    "/WPC-RAFTERS.PNG",
+    "/WPC-WINDOW-HOME.PNG",
   ];
   return (
     <main className="bg-gray-50 text-gray-900">
@@ -295,7 +295,7 @@ const products: Product[] = [
               alt={`WPC Door ${index + 1}`}
               width={600}
               height={300}
-              className="w-full"
+              className="w-full h-300px object-cover"
               priority={index === 0}
             />
           </SwiperSlide>
