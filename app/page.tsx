@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useState, useEffect, useRef } from "react";
@@ -141,6 +141,11 @@ const products: Product[] = [
       author: "– Priya M., Bangalore",
     },
   ];
+  const images = [
+    "/ANTIQGROOVINGDOOR.png",
+    "/WPC-RAFTERS.png",
+    "/WPC-WINDOW-HOME.png",
+  ];
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Header */}
@@ -268,9 +273,37 @@ const products: Product[] = [
         <Link href="#" className="hover:text-purple-300 py-2">Catalogue</Link>
       </div>
     </header>
-
+<motion.section
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative"
+    >
+      <Swiper
+        modules={[ Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        loop={true}
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index}>
+            <Image
+              src={src}
+              alt={`WPC Door ${index + 1}`}
+              width={600}
+              height={300}
+              className="w-full"
+              priority={index === 0}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </motion.section>
       {/* Hero Banner */}
-      <motion.section
+      {/*<motion.section
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -283,7 +316,7 @@ const products: Product[] = [
           height={300}
           className="w-full"
         />
-      </motion.section>
+      </motion.section> */}
 
       {/* Promo Section */}
       <motion.section
@@ -449,35 +482,67 @@ const products: Product[] = [
     </motion.section>
 
      {/* Product Grid */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-         className="px-6 py-10"
-         >
-      <h2 className="text-2xl font-bold text-center mb-8">Our Products</h2>
-      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {products.map((product, index) => (
-          <Link
-            key={index}
-            href={`/collections/${product.id}`}
-            className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
-          >
-            <div className="w-28 h-28 flex items-center justify-center bg-gray-100 rounded-lg shadow-md overflow-hidden">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={100}
-                height={100}
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
-            <p className="mt-2 text-sm font-semibold">{product.name}</p>
-          </Link>
-        ))}
-      </div>
-    </motion.section>
+
+<motion.section
+  initial="hidden"
+  whileInView="visible"
+  transition={{ staggerChildren: 0.15 }}
+  viewport={{ once: true, amount: 0.2 }}
+  className="px-6 py-10"
+>
+  <h2 className="text-2xl font-bold text-center mb-8">Our Products</h2>
+
+  {/* Container animation */}
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.6,
+          ease: "easeOut",
+          staggerChildren: 0.12,
+          delayChildren: 0.2,
+        },
+      },
+    }}
+    className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6"
+  >
+    {products.map((product, index) => (
+      <motion.div
+        key={index}
+        variants={{
+          hidden: { opacity: 0, y: 40 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+          },
+        }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 200 }}
+      >
+        <Link
+          href={`/collections/${product.id}`}
+          className="flex flex-col items-center text-center transition-transform duration-300"
+        >
+          <div className="w-28 h-28 flex items-center justify-center bg-gray-100 rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={100}
+              height={100}
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">{product.name}</p>
+        </Link>
+      </motion.div>
+    ))}
+  </motion.div>
+</motion.section>
+
     </main>
   );
 }

@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -44,6 +45,23 @@ type Product = {
   specs1?: Spec1[];
   pdf?: string;
 };
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.42, 0, 0.58, 1], // ✅ Bezier curve (works on all versions)
+    },
+  },
+}
+
 
 export default function ProductClientPage({ product }: { product: Product }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -188,7 +206,12 @@ export default function ProductClientPage({ product }: { product: Product }) {
       </div>
     </header>
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] flex items-center justify-center bg-black">
+       <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn} 
+        className="relative w-full h-[600px] flex items-center justify-center bg-black">
         <Image
           src={product.heroImage}
           alt={product.name}
@@ -200,10 +223,14 @@ export default function ProductClientPage({ product }: { product: Product }) {
             {product.name}
           </h1>
         </div>*/}
-      </section>
+      </motion.section>
 
       {/* Presenting Section */}
-      <section className="max-w-6xl mx-auto px-6 mt-6">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp} className="max-w-6xl mx-auto px-6 mt-6">
   <h2 className="text-xl font-semibold text-gray-700 mb-2 text-center">
     {product.headings?.presenting || "PRESENTING"}
   </h2>
@@ -215,12 +242,16 @@ export default function ProductClientPage({ product }: { product: Product }) {
       {para}
     </p>
   ))}
-</section>
+</motion.section>
 
       {/* Technical Specs */}
 {/* Technical Specifications */}
 {product.specs && product.specs.length > 0 && (
-  <section className="bg-[#c6c6cc] py-2 px-6">
+  <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp} className="bg-[#c6c6cc] py-2 px-6">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
         {product.headings?.technical || "Technical Specifications:"}
@@ -257,18 +288,23 @@ export default function ProductClientPage({ product }: { product: Product }) {
         ))}
       </ul>
     </div>
-  </section>
+  </motion.section>
 )}
 
 {/* Available Specifications */}
 {product.specs1 && product.specs1.length > 0 && (
-  <section className="bg-gray-50 py-12 px-6">
+   <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp} 
+          className="bg-gray-50 py-6 px-6">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-10">
+      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
         {product.headings?.available || "Technical Specifications"}
       </h2>
 
-      <ul className="space-y-6 text-gray-800">
+      <ul className=" text-gray-800">
         {product.specs1.map((spec, i) => (
           <li
             key={i}
@@ -299,7 +335,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
         ))}
       </ul>
     </div>
-  </section>
+  </motion.section>
 )}
 
 
@@ -307,7 +343,11 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
       {/* Frame Sizes */}
       {product.frames.length > 0 && (
-  <section className="max-w-6xl mx-auto px-6 py-2">
+  <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp} className="max-w-6xl mx-auto px-6 py-2">
     <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-8">
       {product.headings?.frame || "FRAME SIZES"}
     </h2>
@@ -341,12 +381,16 @@ export default function ProductClientPage({ product }: { product: Product }) {
         </div>
       ))}
     </div>
-    </section>
+    </motion.section>
       )}
 
       {/* PDF Download Section */}
 {product.pdf && (
-  <section className="px-6 py-8">
+  <motion.section
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp}
+          viewport={{ once: true }} className="px-6 py-8">
     <a
       href={product.pdf}
       download
@@ -385,13 +429,17 @@ export default function ProductClientPage({ product }: { product: Product }) {
         clip-path: polygon(100% 0, 0 0, 100% 100%);
       }
     `}</style>
-  </section>
+  </motion.section>
 )}
 
       {/* Video Section */}
       {/* Media Section (Video or Image) */}
 {(product.video || product.bottomImage) && (
-  <section className="bg-gradient-to-b from-purple-900 to-indigo-900 py-6">
+  <motion.section
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp}
+          viewport={{ once: true }} className="bg-gradient-to-b from-purple-900 to-indigo-900 py-6">
     <div className="max-w-4xl mx-auto px-6 text-center">
       <div className="relative w-full aspect-[4/4] rounded-lg overflow-hidden shadow-lg">
         {product.video ? (
@@ -413,7 +461,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
         )}
       </div>
     </div>
-  </section>
+  </motion.section>
 
   
 )}
