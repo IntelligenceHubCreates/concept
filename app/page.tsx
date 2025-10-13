@@ -173,7 +173,7 @@ const sections = [
       align: "left",
     },
     {
-      image: "/machinery/5.jpg",
+      image: "/machinery/5.JPG",
       title: "",
       subtitle: "",
       align: "right",
