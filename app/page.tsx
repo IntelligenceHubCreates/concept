@@ -154,20 +154,20 @@ const sections = [
       align: "right",
     },
     {
-      image: "/machinery/2.jpg",
+      image: "/machinery/2.JPG",
       title: "",
       subtitle: "",
       description: "1st time in Andhra Pradesh",
       align: "left",
     },
     {
-      image: "/machinery/3.jpg",
+      image: "/machinery/3.JPG",
       title: "",
       subtitle: "",
       align: "right",
     },
     {
-      image: "/machinery/4.jpg",
+      image: "/machinery/4.JPG",
       title: "",
       subtitle: "",
       align: "left",
