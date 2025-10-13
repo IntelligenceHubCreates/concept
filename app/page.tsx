@@ -108,9 +108,9 @@ type Product = {
 
 const products: Product[] = [
   { id:1 ,name: "WPC FRAMES", image: "/homepage-icons/WPC-FRAME.png" },
-  { id:4 ,name: "WPC WINDOWS", image: "/homepage-icons/WPC-WINDOW.PNG" },
+  { id:4 ,name: "WPC WINDOWS", image: "/homepage-icons/WPC-WINDOW.png" },
   { id:5 ,name: "WPC DOOR", image: "/homepage-icons/WPC-DOOR.png" },
-  { id:16 ,name: "HDPC DOOR", image: "/homepage-icons/HDPC-DOOR.PNG" },
+  { id:16 ,name: "HDPC DOOR", image: "/homepage-icons/HDPC-DOOR.png" },
   { id:12 ,name: "35MM HDPC", image: "/homepage-icons/35MM-HDPC-DOOR.png" },
   { id:14 ,name: "DIGITAL DOOR", image: "/homepage-icons/DIGITAL-DOOR.png" },
   { id:7 ,name: "GROOVE DOOR", image: "/homepage-icons/GROOVE-DOOR.png" },
@@ -151,7 +151,7 @@ const sections = [
       image: "/machinery/1.jpg",
       title: "",
       subtitle: "",
-      align: "right",
+      align: "left",
     },
     {
       image: "/machinery/2.JPG",
@@ -590,7 +590,12 @@ const sections = [
           className="relative flex flex-col md:flex-row items-center justify-center py-12"
         >
           {/* Image container */}
-          <div className="relative w-full md:w-4/5 rounded-xl overflow-hidden shadow-lg">
+          <div className={`relative w-full md:w-4/5 overflow-hidden shadow-lg ${
+              sec.align === "right"
+                ? "rounded-l-full" // round left side only
+                : "rounded-r-full" // round right side only
+            }`}
+            >
             <Image
               src={sec.image}
               alt={sec.title}
