@@ -7,9 +7,8 @@ export const products = [
   name: "WPC Door Frame",
   heroImage: "/WPCFRAME.jpg",
   description: [
-    "We Concept, we manufacture premium high-density door frames engineered for exceptional durability, strength, and environmental resistance.",
-    "Our frames are specially designed to be termite-proof and waterproof, making them ideal for long-lasting performance in both residential and commercial settings. Using advanced composite materials-a blend of high-strength polymers and wood fibers-our door frames offer the timeless look of wood with none of its drawbacks. They resist warping, swelling, cracking and require minimal maintenance over their lifetime.",
-    "Whether you're building in humid, costal or termite-prone areas, we Concept door frames deliver the structural stability and aesthetic versatility modern projects demand.",
+    "We Concept, we manufacture premium high-density door frames engineered for exceptional durability, strength, and environmental resistance. Our frames are specially designed to be termite-proof and waterproof, making them ideal for long-lasting performance in both residential and commercial settings.",
+    "Using advanced composite materials—a blend of high-strength polymers and wood fibers—our door frames offer the timeless look of wood with none of its drawbacks. They resist warping, swelling, cracking, and require minimal maintenance over their lifetime. Whether you're building in humid, coastal, or termite-prone areas, We Concept door frames deliver the structural stability and aesthetic versatility modern projects demand.",
   ],
   specs: [
     {
@@ -41,11 +40,8 @@ export const products = [
   name: "WPC SOLID WINDOW FRAMES",
   heroImage: "/WPCWindows.PNG",
   description: [
-    "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems.",
-
-"Our WPC products are engineered for strength, longevity, and weather resistance, making them ideal for both residential and commercial applications. Crafted using a precision mix of wood fibers and high-performance polymers, our window frames and shutters combine the natural look of wood with the durability of advanced composites.",
-
-"We Concept’s solutions are moisture-proof, termite-resistant, low maintenance, and sustainable, aligning with modern green building standards. With a focus on innovation, quality, and customer satisfaction, We Concept delivers products that perform reliably in harsh climatic conditions while enhancing the architectural appeal of any space.",
+    "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems. Our WPC products are engineered for strength, longevity, and weather resistance, making them ideal for both residential and commercial applications.",
+"Crafted using a precision mix of wood fibers and high-performance polymers, our window frames and shutters combine the natural look of wood with the durability of advanced composites. We Concept’s solutions are moisture-proof, termite-resistant, low maintenance, and sustainable, aligning with modern green building standards. With a focus on innovation, quality, and customer satisfaction, We Concept delivers products that perform reliably in harsh climatic conditions while enhancing the architectural appeal of any space.",
   ],
   specs: [
     {
@@ -66,11 +62,11 @@ export const products = [
   ],
   frames: [
     { src: "/FRAME-7.png",
-      width: 240, 
+      width: 210, 
       height: 100,
      },
-    { src: "/frame-6.png",
-      width: 80, 
+    { src: "/frame-8.png",
+      width: 90, 
       height: 100,
      },
   ],
@@ -84,11 +80,11 @@ export const products = [
       presenting: "PRESENTING",
       technical: "Key Features:",
       frame: "PVC FILM FINISHES:",
+
     },
   description: [
-    "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems.",
-    "Our WPC products are engineered for strength, longevity, and weather resistance, making them ideal for both residential and commercial applications. Crafted using a precision mix of wood fibers and high-performance polymers, our window frames and shutters combine the natural look of wood with the durability of advanced composites.",
-    "We Concept’s solutions are moisture-proof, termite-resistant, low maintenance, and sustainable, aligning with modern green building standards. With a focus on innovation, quality, and customer satisfaction, We Concept delivers products that perform reliably in harsh climatic conditions while enhancing the architectural appeal of any space.",
+    "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems. Our WPC products are engineered for strength, longevity, and weather resistance, making them ideal for both residential and commercial applications.",
+ "Crafted using a precision mix of wood fibers and high-performance polymers, our window frames and shutters combine the natural look of wood with the durability of advanced composites. We Concept’s solutions are moisture-proof, termite-resistant, low maintenance, and sustainable, aligning with modern green building standards. With a focus on innovation, quality, and customer satisfaction, We Concept delivers products that perform reliably in harsh climatic conditions while enhancing the architectural appeal of any space.",
   ],
   specs: [
    {
@@ -116,6 +112,8 @@ export const products = [
   headings: {
       presenting: "PRESENTING",
       technical: "HDPC DOOR SPECIFICATION",
+      technical2: "HDPC FRAME SPECIFICATION",
+      technical3: "HDPC ARCHITRAVE",
       frame: "PVC FILM FINISHES:",
     },
   description: [
@@ -133,26 +131,32 @@ export const products = [
         text: "FINAL DOOR: COMES WITH 4SIDE EDGE BAND (1mm) + RE INFORCEMENT + HANDLE + BUTTERFLY HINZES",
         image: "/SPECIFICATION1.png", // optional
         width: 500,
-    height: 300,
+        height: 300,
       },
+  ],
+  specs2: [
+    
       {
-        text: "HDPC FRAME SPECIFICATION",
+    
         image: "/SPECIFICATION2.png",
         width: 300,
-    height: 200,
+        height: 200,
 
       },
+      
+  ],
+  specs3: [
       {
-        text: "HDPC ARCHITRAVE",
+        
         image: "/SPECIFICATION .png",
         width: 300,
-    height: 200,
+        height: 200,
 
       },
   ],
   frames: [
-    { src: "/Hdpc-options.jpg",
-      width: 400, 
+    { src: "/PVC-FILM-FINISHES.png",
+      width: 370, 
       height: 300,
      },
   ],
@@ -168,9 +172,7 @@ export const products = [
       frame: "PRODUCT FEATURES",
     },
   description: [
-    "Engineered for durability and designed with sophistication, the Concept 30MM Solid High-Density Polymer Composition Door redefines modern door technology. Crafted from advanced high-density polymer composite, this door delivers unmatched strength, stability, and resistance to moisture, termites, and warping—making it the perfect solution for both interior and semi-exterior applications.",
-    "With a solid 30MM core, the door provides superior insulation, soundproofing, and impact resistance. Its seamless finish mimics the natural elegance of wood or can be customized with a range of premium surface textures and colours, including teak, walnut, or matte finishes, ensuring aesthetic flexibility to match any architectural style.",
-    ,
+    "Engineered for durability and designed with sophistication, the Concept 30MM Solid High-Density Polymer Composition Door redefines modern door technology. Crafted from advanced high-density polymer composite, this door delivers unmatched strength, stability, and resistance to moisture, termites, and warping—making it the perfect solution for both interior and semi-exterior applications. With a solid 30MM core, the door provides superior insulation, soundproofing, and impact resistance. Its seamless finish mimics the natural elegance of wood or can be customized with a range of premium surface textures and colours, including teak, walnut, or matte finishes, ensuring aesthetic flexibility to match any architectural style.",
   ],
   specs: [
     {
@@ -198,10 +200,8 @@ export const products = [
       frame: "",
     },
   description: [
-    "Discover the perfect blend of elegance and durability with our Antique Grooving Door from the Marble Series. Crafted from high-density WPC (Wood Polymer Composite), this door is designed to elevate your interior spaces with its stunning marble patterns and intricate grooving details.",
-    "The door's glossy finish not only enhances its visual appeal but also makes it easy to clean and maintain, ensuring it remains a focal point in your home for years to come. With thickness options of 27mm and 30mm, this door provides excellent insulation and soundproofing, making it ideal for both residential and commercial settings.",
-    "Experience the perfect combination of style, functionality, and longevity with our Antique Grooving Door - a true testament to modern craftsmanship and design.",
-    ,
+    "Discover the perfect fusion of art and durability with the Antique WPC Grooving Door – Marble Series. These designer doors feature high-resolution digital prints combined with precision CNC grooving and a glossy UV-coated finish, offering a marble-like appearance with modern performance.",
+"Crafted from high-quality WPC material, these doors are not only visually stunning but also resistant to water, termites, and deformation — making them ideal for contemporary homes, luxury interiors, and commercial spaces.",
   ],
   specs: [
     {
@@ -228,7 +228,7 @@ export const products = [
   ],
   frames: [
   ],
-  bottomImage: "/Option-2.jpg",
+  bottomImage: "/ANTIQ-GROOVE-DOOR-poster.png",
    pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
   },
   {
@@ -241,8 +241,7 @@ export const products = [
       frame: "",
     },
   description: [
-    "WPC (wood plastic composite )digital doors are a modern innovation in door design, combining the durability and low maintenance of WPC material with the versatility of digital printing technology. These doors are made from a composite of wood fibers and plastic polymers, resulting in a strong, weather-resistant product that is ideal for both interior and exterior use.",
-    "The standout feature of WPC digital doors is their ability to be customized with high-resolution digital prints. This allows for a wide range of design options, from realistic wood grain patterns to vibrant colors and intricate designs, enabling homeowners and designers to achieve a unique aesthetic that complements their space.",
+    "WPC (Wood Plastic Composite) digital doors are an innovative product combining the strength of composite materials with high-resolution digital printing technology. These doors are crafted using a mix of wood fibers and thermoplastics, making them highly durable, water-resistant, and termite-proof. What sets them apart is their ability to feature vibrant, detailed, and customizable digital prints on the surface.",
   ],
   specs: [
     {
@@ -269,6 +268,7 @@ export const products = [
   ],
   frames: [
   ],
+  pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
   bottomImage: "",
   },
   {
@@ -281,10 +281,9 @@ export const products = [
       frame: "",
     },
   description: [
-    "Bring warmth and elegance of natural wood with the strength and durability of WPC (Wood Polymer Composite) Grooving Doors. These doors are expertly crafted from a blend of wood fibers and high-quality plastic polymers, resulting in a robust, weather-resistant product that is perfect for both interior and exterior applications.",
-    "The grooving design adds a touch of sophistication and texture, enhancing the visual appeal of any space. WPC grooving doors are available in a variety of finishes, from classic wood grains to contemporary colors, allowing for seamless integration into any architectural style.",
-    "With their superior resistance to moisture, termites, and warping, WPC grooving doors offer a long-lasting solution that requires minimal maintenance, making them an excellent choice for modern living.",
-    ,
+    "Bring the warmth and elegance of natural wood with the strength of modern materials. The WPC Grooving Door – Wooden Series is crafted from high-density Wood Polymer Composite, designed to resemble real wood grain with precision CNC grooves that enhance its visual appeal.",
+"Perfect for both residential and commercial use, this door blends traditional wood aesthetics with the long-lasting durability of WPC.",
+
   ],
   specs: [
     {
@@ -315,6 +314,8 @@ export const products = [
   ],
   frames: [
   ],
+  pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
+  pdf2: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
   bottomImage: "",
   },
   {
@@ -327,10 +328,9 @@ export const products = [
       frame: "",
     },
   description: [
-    "Experience the perfect blend of style and durability with WPC (Wood Polymer Composite) UV Texture Doors. These doors are crafted from a high-density composite material that combines wood fibers with durable plastic polymers, resulting in a product that is both strong and resistant to environmental factors.",
-    "The UV texture finish not only enhances the door's aesthetic appeal but also provides an added layer of protection against fading, scratches, and wear, ensuring that the door maintains its beauty over time. Available in a variety of wood-like textures and colors, WPC UV texture doors can seamlessly complement any interior design style.",
-    "Ideal for both residential and commercial applications, these doors offer excellent resistance to moisture, termites, and warping, making them a low-maintenance and long-lasting choice for modern living spaces.",
-    ,
+    "Where Durability Meets Designer Finish",
+"Elevate your interiors with our Textured UV Printed WPC Door, crafted to bring together advanced technology and timeless aesthetics.",
+
   ],
   specs: [
     {
@@ -349,8 +349,12 @@ export const products = [
       },
   ],
   frames: [
+    { src: "/DESIGNS.png",
+      width: 390, 
+      height: 450,
+     },
   ],
-  bottomImage: "/UVTexture.jpg",
+  bottomImage: "",
   },
   {
     id: 3,

@@ -12,6 +12,8 @@ type Frame = { src: string; size?: string; width: number; height: number;  };
 type Headings = {
   presenting?: string;
   technical?: string;
+  technical2?: string;
+  technical3?: string;
   frame?: string;
   available?: string;
 };
@@ -24,6 +26,20 @@ type Spec = {
 };
 
 type Spec1 = {
+  text: string;
+  image?: string; // optional image for some specs
+  width?: number; 
+  height?: number;
+};
+
+type Spec2 = {
+  text: string;
+  image?: string; // optional image for some specs
+  width?: number; 
+  height?: number;
+};
+
+type Spec3 = {
   text: string;
   image?: string; // optional image for some specs
   width?: number; 
@@ -43,7 +59,10 @@ type Product = {
   image?: string;
   specs?: Spec[];
   specs1?: Spec1[];
+  specs2?: Spec2[];
+  specs3?: Spec3[];
   pdf?: string;
+  pdf2?: string;
 };
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -216,7 +235,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           src={product.heroImage}
           alt={product.name}
           fill
-          className="max-w-full max-h-full object-contain opacity-70"
+          className="max-w-full max-h-full object-cover opacity-70"
         />
        {/*} <div className="absolute z-10 text-center px-6">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
@@ -261,25 +280,25 @@ export default function ProductClientPage({ product }: { product: Product }) {
         {product.specs.map((spec, i) => (
           <li
             key={i}
-            className="flex items-start gap-4 pb-2 last:border-none"
+            className="flex items-start gap-4 pb-1 last:border-none"
           >
             {/* Custom bullet */}
             <span className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
 
             {/* Text + optional image container */}
-            <div className="flex flex-col md:flex-row md:items-center gap-6 w-full">
+            <div className="flex flex-col md:flex-row md:items-center gap-1 w-full">
               {/* Text */}
               <p className="flex-1 text-lg leading-relaxed">{spec.text}</p>
 
               {/* Conditional Image */}
               {spec.image && (
-                <div className="relative w-48 h-32 flex-shrink-0">
+                <div className="relative flex-shrink-0">
                   <Image
                     src={spec.image}
                     alt={`Specification image ${i + 1} for ${product.name}`}
                     width={spec.width || 250}
                     height={spec.height || 150}
-                    className="object-contain rounded-lg shadow-md"
+                    className="object-contain"
                   />
                 </div>
               )}
@@ -290,6 +309,86 @@ export default function ProductClientPage({ product }: { product: Product }) {
     </div>
   </motion.section>
 )}
+
+
+<div className="flex flex-row w-full justify-center items-start overflow-hidden">
+  {product.specs2 && product.specs2.length > 0 && (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      className="bg-[#c6c6cc] py-2 px-4 ml-6 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
+    >
+      <div className="max-w-full mx-auto">
+        <h2 className="text-xl md:text-2xl font-bold text-purple-900 ">
+          {product.headings?.technical2 || "Technical Specifications:"}
+        </h2>
+
+        <ul className="text-gray-800">
+          {product.specs2.map((spec, i) => (
+            <li key={i} className="flex items-start gap-4 pb-1 last:border-none">
+              {/*<span className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>*/}
+              <div className="flex flex-col md:flex-row md:items-center w-full">
+                <p className="flex-1 text-base leading-snug">{spec.text}</p>
+                {spec.image && (
+                  <div className="relative flex-shrink-0">
+                    <Image
+                      src={spec.image}
+                      alt={`Specification image ${i + 1} for ${product.name}`}
+                      width={spec.width || 200}
+                      height={spec.height || 120}
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.section>
+  )}
+
+  {product.specs3 && product.specs3.length > 0 && (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      className="bg-[#c6c6cc] py-2 px-4 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
+    >
+      <div className="max-w-full mx-auto">
+        <h2 className="text-xl md:text-2xl font-bold text-purple-900 mb-4">
+          {product.headings?.technical3 || "Technical Specifications:"}
+        </h2>
+
+        <ul className="text-gray-800">
+          {product.specs3.map((spec, i) => (
+            <li key={i} className="flex items-start gap-4 pb-1 last:border-none">
+              {/*<span className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>*/}
+              <div className="flex flex-col md:flex-row md:items-center w-full">
+                <p className="flex-1 text-base leading-snug">{spec.text}</p>
+                {spec.image && (
+                  <div className="relative flex-shrink-0">
+                    <Image
+                      src={spec.image}
+                      alt={`Specification image ${i + 1} for ${product.name}`}
+                      width={spec.width || 200}
+                      height={spec.height || 120}
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.section>
+  )}
+</div>
+
 
 {/* Available Specifications */}
 {product.specs1 && product.specs1.length > 0 && (
@@ -348,17 +447,17 @@ export default function ProductClientPage({ product }: { product: Product }) {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp} className="max-w-6xl mx-auto px-6 py-2">
-    <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-8">
+    <h2 className="text-2xl md:text-3xl font-bold text-purple-900 ">
       {product.headings?.frame || "FRAME SIZES"}
     </h2>
-    <div className="flex flex-wrap justify-center gap-1">
+    <div className="flex flex-wrap justify-center">
       {product.frames.map((frame, index) => (
         <div
           key={index}
           className="flex flex-col items-center text-center"
           style={{
             width: `${frame.width}px`,
-            height: `${frame.height + 50}px`,
+            height: `${frame.height }px`,
           }}
         >
           <div
@@ -372,7 +471,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
               src={frame.src}
               alt={`Frame size ${frame.size}`}
               fill
-              className="object-contain"
+              className="object-contain mt-2"
             />
           </div>
           <p className="mt-3 text-sm font-semibold text-gray-800">
@@ -385,12 +484,13 @@ export default function ProductClientPage({ product }: { product: Product }) {
       )}
 
       {/* PDF Download Section */}
+      <div className="flex flex-row">
 {product.pdf && (
   <motion.section
           initial="hidden"
           whileInView="visible"
           variants={fadeUp}
-          viewport={{ once: true }} className="px-6 py-8">
+          viewport={{ once: true }} className="px-4 py-8">
     <a
       href={product.pdf}
       download
@@ -431,6 +531,53 @@ export default function ProductClientPage({ product }: { product: Product }) {
     `}</style>
   </motion.section>
 )}
+{product.pdf2 && (
+  <motion.section
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp}
+          viewport={{ once: true }} className="py-8">
+    <a
+      href={product.pdf2}
+      download
+      className="inline-flex flex-col items-center gap-1 group"
+    >
+      {/* PDF Icon */}
+      <div className="relative w-16 h-20 border-2 border-red-500 rounded-md flex flex-col items-center justify-center">
+        {/* Folded corner effect */}
+        <div className="absolute top-0 right-0 w-4 h-4 bg-red-500 clip-path-triangle"></div>
+
+        {/* PDF Label */}
+        <span className="absolute top-2 left-2 text-[10px] font-bold text-red-500 bg-white px-1 rounded">
+          PDF
+        </span>
+
+        {/* Download Arrow */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-red-500 group-hover:text-red-600 transition-colors"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 16l4-5h-3V4h-2v7H8l4 5z" />
+          <path d="M20 18H4v2h16v-2z" />
+        </svg>
+      </div>
+
+      <span className="mt-2 text-red-600 font-semibold text-sm">
+        Download PDF
+      </span>
+    </a>
+
+    {/* Custom folded-corner style */}
+    <style jsx>{`
+      .clip-path-triangle {
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
+    `}</style>
+  </motion.section>
+)}
+</div>
 
       {/* Video Section */}
       {/* Media Section (Video or Image) */}
@@ -441,7 +588,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           variants={fadeUp}
           viewport={{ once: true }} className="bg-gradient-to-b from-purple-900 to-indigo-900 py-6">
     <div className="max-w-4xl mx-auto px-6 text-center">
-      <div className="relative w-full aspect-[4/4] rounded-lg overflow-hidden shadow-lg">
+      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
         {product.video ? (
           <video
             controls
