@@ -107,24 +107,24 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id:1 ,name: "WPC FRAMES", image: "/WPCFrame.png" },
-  { id:4 ,name: "WPC WINDOWS", image: "/WPCWindows.PNG" },
-  { id:5 ,name: "WPC DOOR", image: "/WPCDOOR.png" },
-  { id:16 ,name: "HDPC DOOR", image: "/HDPCDOOR.PNG" },
-  { id:12 ,name: "35MM HDPC", image: "/35mmhdpcdoor.jpg" },
-  { id:14 ,name: "DIGITAL DOOR", image: "/Wpc-digital-door.png" },
-  { id:7 ,name: "GROOVE DOOR", image: "/Groove-door.png" },
-  { id:10 ,name: "ANTIQUE GROOVE DOOR", image: "/AGD.jpg" },
-  { id:11 ,name: "TEXTURED DOOR", image: "/GREEKKEY.jpg" },
-  { id:13 ,name: "WPC DIGITAL SHUTTRE", image: "/DIGITAL-SHUTTERS.png" },
-  { id:6 ,name: "POLYGRANITE SHEETS", image: "/polygranet-SHEET.png" },
-  { id:3 ,name: "3D WPC BOARD", image: "/3dWPCBOARD.png" },
-  { id:8 ,name: "EXTERIOR LOUVERS", image: "/Exterior-louvers.png" },
-  { id:9 ,name: "EXTERIOR PILLERS", image: "/Pillar.png" },
-  { id:15 ,name: "WPC DIGITAL LOUVERS", image: "/Digital-louvers.png" },
-  { id:2 ,name: "HDPC SHEETS", image: "/HDPCBOARD.png" },
-  { id:17 ,name: "WPC SHEETS", image: "/WPCsheets.png" },
-  { id:18 ,name: "CELING PANEL", image: "/R8.png" },
+  { id:1 ,name: "WPC FRAMES", image: "/homepage-icons/WPC-FRAME.png" },
+  { id:4 ,name: "WPC WINDOWS", image: "/homepage-icons/WPC-WINDOW.PNG" },
+  { id:5 ,name: "WPC DOOR", image: "/homepage-icons/WPC-DOOR.png" },
+  { id:16 ,name: "HDPC DOOR", image: "/homepage-icons/HDPC-DOOR.PNG" },
+  { id:12 ,name: "35MM HDPC", image: "/homepage-icons/35MM-HDPC-DOOR.png" },
+  { id:14 ,name: "DIGITAL DOOR", image: "/homepage-icons/DIGITAL-DOOR.png" },
+  { id:7 ,name: "GROOVE DOOR", image: "/homepage-icons/GROOVE-DOOR.png" },
+  { id:10 ,name: "ANTIQUE GROOVE DOOR", image: "/homepage-icons/ANTIQ-DOOR.png" },
+  { id:11 ,name: "TEXTURED DOOR", image: "/homepage-icons/TEXTURE-DOOR.png" },
+  { id:13 ,name: "WPC DIGITAL SHUTTLE", image: "/homepage-icons/DIGITAL-SHUTTLES.png" },
+  { id:6 ,name: "POLYGRANITE SHEETS", image: "/homepage-icons/POLYGRANITE-SHEETS.png" },
+  { id:3 ,name: "3D WPC BOARD", image: "/homepage-icons/3D-BOARD-ICON.png" },
+  { id:8 ,name: "EXTERIOR LOUVERS", image: "/homepage-icons/EXTERIOR-LOUVERS.png" },
+  { id:9 ,name: "EXTERIOR PILLERS", image: "/homepage-icons/WPC-PILLARS-ICON.png" },
+  { id:15 ,name: "WPC DIGITAL RAFTERS", image: "/homepage-icons/DIGITAL-RAFTERS.png" },
+  { id:2 ,name: "HDPC SHEETS", image: "/homepage-icons/HDPC-BOARD.png" },
+  { id:17 ,name: "WPC SHEETS", image: "/homepage-icons/WPC-BOARD-ICON.png" },
+  { id:18 ,name: "CELING PANEL", image: "/homepage-icons/WPC-RAFTERS.png" },
 ];
 
      const testimonials = [
@@ -146,6 +146,41 @@ const products: Product[] = [
     "/WPC-RAFTERS.PNG",
     "/WPC-WINDOW-HOME.PNG",
   ];
+const sections = [
+    {
+      image: "/machinery/1.jpg",
+      title: "",
+      subtitle: "",
+      align: "right",
+    },
+    {
+      image: "/machinery/2.jpg",
+      title: "",
+      subtitle: "",
+      description: "1st time in Andhra Pradesh",
+      align: "left",
+    },
+    {
+      image: "/machinery/3.jpg",
+      title: "",
+      subtitle: "",
+      align: "right",
+    },
+    {
+      image: "/machinery/4.jpg",
+      title: "",
+      subtitle: "",
+      align: "left",
+    },
+    {
+      image: "/machinery/5.jpg",
+      title: "",
+      subtitle: "",
+      align: "right",
+    },
+  ];
+
+
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Header */}
@@ -294,8 +329,8 @@ const products: Product[] = [
               src={src}
               alt={`WPC Door ${index + 1}`}
               width={600}
-              height={300}
-              className="w-full h-300px object-cover"
+              height={200}
+              className="w-full h-350px object-cover"
               priority={index === 0}
             />
           </SwiperSlide>
@@ -371,9 +406,9 @@ const products: Product[] = [
             640: { slidesPerView: 4 },
             1024: { slidesPerView: 5 },
           }}
-          className="px-4"
+          className="px-2"
         >
-          {productss.map((item) => (
+          {products.map((item) => (
             <SwiperSlide key={item.id}>
               <Link
                 href={`/collections/${item.id}`}
@@ -384,8 +419,8 @@ const products: Product[] = [
                     <Image
                       src={item.image}
                       alt={item.name}
-                      width={60}
-                      height={60}
+                      width={75}
+                      height={75}
                       className="max-w-full max-h-full rounded-full object-contain"
                     />
                   </div>
@@ -482,7 +517,7 @@ const products: Product[] = [
     </motion.section>
 
      {/* Product Grid */}
-
+{/*}
 <motion.section
   initial="hidden"
   whileInView="visible"
@@ -492,7 +527,7 @@ const products: Product[] = [
 >
   <h2 className="text-2xl font-bold text-center mb-8">Our Products</h2>
 
-  {/* Container animation */}
+  
   <motion.div
     variants={{
       hidden: { opacity: 0, y: 30 },
@@ -541,7 +576,55 @@ const products: Product[] = [
       </motion.div>
     ))}
   </motion.div>
-</motion.section>
+</motion.section> */}
+
+      {/* Machinery Section */}
+      <section className="bg-[#0B2041] text-white">
+      {sections.map((sec, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="relative flex flex-col md:flex-row items-center justify-center py-12"
+        >
+          {/* Image container */}
+          <div className="relative w-full md:w-4/5 rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src={sec.image}
+              alt={sec.title}
+              width={1200}
+              height={600}
+              className="w-full h-auto object-cover"
+            />
+
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+            {/* Text overlay */}
+            <div
+              className={`absolute bottom-8 ${
+                sec.align === "right" ? "right-8 text-right" : "left-8 text-left"
+              }`}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight drop-shadow-lg">
+                {sec.title}{" "}
+                <span className="text-yellow-400 font-bold">{sec.subtitle}</span>
+              </h2>
+              {sec.description && (
+                <p className="text-sm text-gray-200 mt-2">{sec.description}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Decorative connectors between sections */}
+          {index < sections.length - 1 && (
+            <div className="hidden md:block w-1 h-24 bg-gradient-to-b from-blue-400 to-transparent mx-auto"></div>
+          )}
+        </motion.div>
+      ))}
+    </section>
 
     </main>
   );
