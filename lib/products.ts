@@ -137,7 +137,7 @@ export const products = [
   specs2: [
     
       {
-    
+         text:"",
         image: "/SPECIFICATION2.png",
         width: 300,
         height: 200,
@@ -147,7 +147,7 @@ export const products = [
   ],
   specs3: [
       {
-        
+        text:"",
         image: "/SPECIFICATION .png",
         width: 300,
         height: 200,
