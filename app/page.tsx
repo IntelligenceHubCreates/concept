@@ -30,63 +30,6 @@ export default function Home() {
     };
   }, []);
 
-  const productss = [
-  {
-    id: "1",
-    name: "WPC FRAMES",
-    image: "/WPCFrame.png",
-  },
-  {
-    id: "2",
-    name: "HDPC SHEETS",
-    image: "/HDPCBOARD.png",
-  },
-  {
-    id: "3",
-    name: "3D WPC BOARD",
-    image: "/3dWPCBOARD.png",
-  },
-  {
-    id: "4",
-    name: "WPC WINDOWS",
-    image: "/WPC-window.png",
-  },
-  {
-    id: "5",
-    name: "WPC DOOR",
-    image: "/WPCDOOR_transparent.png",
-  },
-  {
-    id: "6",
-    name: "POLYGRANET SHEET",
-    image: "/polygranet-SHEET.png",
-  },
-  {
-    id: "7",
-    name: "GROOVE DOOR",
-    image: "/Groove-door.png",
-  },
-  {
-    id: "8",
-    name: "EXTERIOR LOUVERS",
-    image: "/Exterior-louvers.png",
-  },
-  {
-    id: "9",
-    name: "EXTERIOR PILLERS",
-    image: "/Pillar.png",
-  },
-  {
-    id: "10",
-    name: "ANTIQUE GROOVING DOOR",
-    image: "/AGD.jpg",
-  },
-  {
-    id: "11",
-    name: "TEXTURED DOOR",
-    image: "/GREEKKEY.jpg",
-  },
-];
 
 
 // 🧱 Sample Data (replace with your real product array or fetch dynamically)
