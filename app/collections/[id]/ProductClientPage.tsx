@@ -63,6 +63,15 @@ type Product = {
   specs3?: Spec3[];
   pdf?: string;
   pdf2?: string;
+  pdf3?: string;
+  pdf4?: string;
+  pdfImage2?: string;
+  pdfImage?: string;
+  gallery?: {
+    id: string;
+    image: string;
+    pdf: string;
+  }[];
 };
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -99,8 +108,8 @@ export default function ProductClientPage({ product }: { product: Product }) {
       };
     }, []);
   return (
-    <main className="bg-[#c6c6cc] text-neutral-900">
-      <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900 fixed top-0 left-0 w-full z-50 h-16">
+    <main className="bg-gray-50 text-neutral-900">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -175,7 +184,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
       {/* Mobile Menu (Slide from Right) */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-purple-900 to-indigo-900 transform ${
+        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] transform ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col items-start pt-20 px-6 text-white shadow-lg md:hidden z-[1000]`}
       >
@@ -204,7 +213,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
   </button>
 
   <div
-    className={`mt-2 bg-gradient-to-r from-purple-900 to-indigo-900 text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
+    className={`mt-2 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
       isOpen ? "max-h-96 opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-0"
     }`}
   >
@@ -230,12 +239,12 @@ export default function ProductClientPage({ product }: { product: Product }) {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn} 
-        className="relative w-full h-[600px] flex items-center justify-center bg-black">
+        className="relative w-full h-[500px] flex items-center justify-center mt-6 bg-gray-50">
         <Image
           src={product.heroImage}
           alt={product.name}
           fill
-          className="max-w-full max-h-full object-cover opacity-70"
+          className="max-w-full max-h-full object-contain"
         />
        {/*} <div className="absolute z-10 text-center px-6">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
@@ -270,7 +279,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="bg-[#c6c6cc] py-2 px-6">
+          variants={fadeUp} className="bg-gray-50 py-2 px-6">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
         {product.headings?.technical || "Technical Specifications:"}
@@ -311,6 +320,56 @@ export default function ProductClientPage({ product }: { product: Product }) {
 )}
 
 
+
+
+
+{/* Available Specifications */}
+{product.specs1 && product.specs1.length > 0 && (
+   <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp} 
+          className="bg-gray-50 py-6 px-6">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
+        {product.headings?.available || "Technical Specifications"}
+      </h2>
+
+      <ul className=" text-gray-800">
+        {product.specs1.map((spec, i) => (
+          <li
+            key={i}
+            className="flex items-start gap-4 pb-1 last:border-none"
+          >
+            {/* Custom bullet */}
+            <span className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
+
+            {/* Text + optional image container */}
+            <div className="flex flex-col md:flex-row md:items-center w-full">
+              {/* Text */}
+              <p className="flex-1 text-lg leading-relaxed">{spec.text}</p>
+
+              {/* Conditional Image */}
+              {spec.image && (
+                <div className="relative w-48 h-32 flex-shrink-0">
+                  <Image
+                    src={spec.image}
+                    alt={`Specification image ${i + 1} for ${product.name}`}
+                    width={spec.width || 250}
+                    height={spec.height || 150}
+                    className="object-contain rounded-lg shadow-md"
+                  />
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </motion.section>
+)}
+
 <div className="flex flex-row w-full justify-center items-start overflow-hidden">
   {product.specs2 && product.specs2.length > 0 && (
     <motion.section
@@ -318,11 +377,11 @@ export default function ProductClientPage({ product }: { product: Product }) {
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeUp}
-      className="bg-[#c6c6cc] py-2 px-4 ml-6 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
+      className="bg-gray-50 py-2 px-4 ml-6 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
     >
       <div className="max-w-full mx-auto">
         <h2 className="text-xl md:text-2xl font-bold text-purple-900 ">
-          {product.headings?.technical2 || "Technical Specifications:"}
+          {product.headings?.technical2}
         </h2>
 
         <ul className="text-gray-800">
@@ -356,19 +415,19 @@ export default function ProductClientPage({ product }: { product: Product }) {
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeUp}
-      className="bg-[#c6c6cc] py-2 px-4 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
+      className="bg-gray-50 py-2 px-4 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
     >
       <div className="max-w-full mx-auto">
         <h2 className="text-xl md:text-2xl font-bold text-purple-900 mb-4">
-          {product.headings?.technical3 || "Technical Specifications:"}
+          {product.headings?.technical3}
         </h2>
 
         <ul className="text-gray-800">
           {product.specs3.map((spec, i) => (
             <li key={i} className="flex items-start gap-4 pb-1 last:border-none">
-              {/*<span className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>*/}
+              <span className="w-1 h-1 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
               <div className="flex flex-col md:flex-row md:items-center w-full">
-                <p className="flex-1 text-base leading-snug">{spec.text}</p>
+                <p className="flex-1 text-xs leading-snug">{spec.text}</p>
                 {spec.image && (
                   <div className="relative flex-shrink-0">
                     <Image
@@ -390,65 +449,15 @@ export default function ProductClientPage({ product }: { product: Product }) {
 </div>
 
 
-{/* Available Specifications */}
-{product.specs1 && product.specs1.length > 0 && (
-   <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp} 
-          className="bg-gray-50 py-6 px-6">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
-        {product.headings?.available || "Technical Specifications"}
-      </h2>
-
-      <ul className=" text-gray-800">
-        {product.specs1.map((spec, i) => (
-          <li
-            key={i}
-            className="flex items-start gap-4 pb-2 last:border-none"
-          >
-            {/* Custom bullet */}
-            <span className="w-3 h-3 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
-
-            {/* Text + optional image container */}
-            <div className="flex flex-col md:flex-row md:items-center gap-6 w-full">
-              {/* Text */}
-              <p className="flex-1 text-lg leading-relaxed">{spec.text}</p>
-
-              {/* Conditional Image */}
-              {spec.image && (
-                <div className="relative w-48 h-32 flex-shrink-0">
-                  <Image
-                    src={spec.image}
-                    alt={`Specification image ${i + 1} for ${product.name}`}
-                    width={spec.width || 250}
-                    height={spec.height || 150}
-                    className="object-contain rounded-lg shadow-md"
-                  />
-                </div>
-              )}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </motion.section>
-)}
-
-
-
-
       {/* Frame Sizes */}
       {product.frames.length > 0 && (
   <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="max-w-6xl mx-auto px-6 py-2">
+          variants={fadeUp} className="max-w-6xl mx-auto px-4 py-2">
     <h2 className="text-2xl md:text-3xl font-bold text-purple-900 ">
-      {product.headings?.frame || "FRAME SIZES"}
+      {product.headings?.frame}
     </h2>
     <div className="flex flex-wrap justify-center">
       {product.frames.map((frame, index) => (
@@ -579,6 +588,76 @@ export default function ProductClientPage({ product }: { product: Product }) {
 )}
 </div>
 
+{/* 🔹 Product Gallery Section */}
+{product.gallery && product.gallery.length > 0 && (
+  <div className="w-full py-10 px-4 flex flex-col items-center">
+    {/* Row 1 */}
+    <div className="flex flex-wrap justify-center gap-6 mb-8">
+      {product.gallery.slice(0, 3).map((item, index) => (
+        <motion.div
+          key={item.id}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="flex flex-col items-center text-center"
+        >
+          <a
+            href={item.pdf}
+            download
+            className={`group relative w-40 h-40 md:w-48 md:h-48 overflow-hidden  hover:scale-105 transition-transform
+              ${index % 2 === 0 ? "rounded-l-[30px]" : "rounded-r-[30px]"}`}
+          >
+            <Image
+              src={item.image}
+              alt={item.id}
+              fill
+              className="object-cover bg-gray-50"
+            />
+          </a>
+          <p className="mt-2 text-gray-700 font-semibold font-serif italic text-lg">
+            {item.id.toUpperCase()}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Row 2 (slightly staggered / offset look) */}
+    <div className="flex flex-wrap justify-center gap-6 md:mt-[-20px]">
+      {product.gallery.slice(3, 6).map((item, index) => (
+        <motion.div
+          key={item.id}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="flex flex-col items-center text-center"
+        >
+          <a
+            href={item.pdf}
+            download
+            className={`group relative w-40 h-40 md:w-48 md:h-48 overflow-hidden hover:scale-105 transition-transform
+              ${index % 2 === 0 ? "rounded-r-[30px]" : "rounded-l-[30px]"}`}
+          >
+            <Image
+              src={item.image}
+              alt={item.id}
+              fill
+              className="object-cover bg-gray-50"
+            />
+          </a>
+          <p className="mt-2 text-gray-700 font-semibold font-serif italic text-lg">
+            {item.id.toUpperCase()}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+)}
+
+
+
+
       {/* Video Section */}
       {/* Media Section (Video or Image) */}
 {(product.video || product.bottomImage) && (
@@ -603,7 +682,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
             src={product.bottomImage || "/fallback-image.png"}
             alt={`${product.name} display`}
             fill
-            className="max-w-full max-h-full object-fit"
+            className="max-w-full max-h-full object-contain"
           />
         )}
       </div>

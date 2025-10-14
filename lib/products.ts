@@ -6,6 +6,9 @@ export const products = [
     id: 1,
   name: "WPC Door Frame",
   heroImage: "/WPCFRAME.jpg",
+  headings: {
+      frame: "Frame Size:",
+    },
   description: [
     "We Concept, we manufacture premium high-density door frames engineered for exceptional durability, strength, and environmental resistance. Our frames are specially designed to be termite-proof and waterproof, making them ideal for long-lasting performance in both residential and commercial settings.",
     "Using advanced composite materials—a blend of high-strength polymers and wood fibers—our door frames offer the timeless look of wood with none of its drawbacks. They resist warping, swelling, cracking, and require minimal maintenance over their lifetime. Whether you're building in humid, coastal, or termite-prone areas, We Concept door frames deliver the structural stability and aesthetic versatility modern projects demand.",
@@ -344,7 +347,7 @@ export const products = [
 
       },
       {
-        text: "Scratch & fade resistant: UV layer protects the surface from dsaily wear and harsh sunlight",
+        text: "Scratch & fade resistant: UV layer protects the surface from daily wear and harsh sunlight",
 
       },
   ],
@@ -366,10 +369,7 @@ export const products = [
       frame: "",
     },
   description: [
-    "Transform your walls with the innovative 3D WPC (Wood Polymer Composite) Boards, designed to add depth, texture, and a modern aesthetic to any interior space. These boards are made from a high-density composite material that combines wood fibers with durable plastic polymers, resulting in a product that is both strong and environmentally friendly.",
-    "The 3D design creates a striking visual effect, making it an ideal choice for feature walls, commercial spaces, or any area where you want to make a bold statement. Available in a variety of patterns and finishes, WPC 3D boards can easily complement different interior styles, from contemporary to rustic.",
-    "In addition to their aesthetic appeal, these boards are also practical, offering excellent resistance to moisture, termites, and warping. Easy to install and maintain, WPC 3D boards provide a long-lasting solution for enhancing the beauty and functionality of your living or working environment.",
-    ,
+    "Elevate your interiors and exteriors with WPC 3D Wave Boards – a perfect blend of modern design and durable technology. These decorative wall panels feature flowing, wave-like textures that create a dynamic and luxurious visual impact. Crafted from high-quality Wood Polymer Composite, they offer resistance to moisture, termites, and environmental wear — making them ideal for both indoor and outdoor applications.",
   ],
   specs: [
     {
@@ -413,10 +413,7 @@ export const products = [
       frame: "",
     },
   description: [
-    "Polygranite sheets are a revolutionary material that combines the aesthetic appeal of natural stone with the durability and versatility of engineered composites. Made from a blend of high-quality polymers and finely crushed granite, these sheets offer a lightweight yet robust solution for various applications, including countertops, wall cladding, flooring, and decorative panels.",
-    "The manufacturing process involves compressing the granite particles with resin binders under high pressure and temperature, resulting in a non-porous, stain-resistant surface that is easy to maintain. Polygranite sheets are available in a wide range of colors, patterns, and finishes, allowing for customization to suit different design preferences.",
-    "Ideal for both residential and commercial use, polygranite sheets provide excellent resistance to scratches, heat, and chemicals, making them a practical choice for high-traffic areas. Their eco-friendly composition and long-lasting performance make polygranite sheets a smart investment for anyone looking to enhance their space with a touch of natural elegance.",
-    ,
+    "Experience timeless luxury with the Marble Series Polygranite Sheets, crafted to replicate the elegance of natural marble while offering the strength and versatility of advanced polymer materials. Each 8ft x 4ft sheet features high-definition marble textures with rich veining and a glossy finish that enhances any space with sophistication and style.",
   ],
   specs: [
     {
@@ -446,19 +443,20 @@ export const products = [
   ],
   frames: [
   ],
+  pdf: "/pdfs/WPC-3D-BOARDS.pdf",
   bottomImage: "",
   },
   {
     id: 13,
   name: "DIGITAL WPC SHUTTERS",
-  heroImage: "/DIGITAL-SHUTTERS.png",
+  heroImage: "/WPC-DIGITAL-SHUTTERS.png",
   headings: {
       presenting: "PRESENTING",
       technical: "KEY FEATURES",
-      frame: "Why Choose WPC Digital Print Shutters?",
+      available: "Why Choose WPC Digital Print Shuttles?",
     },
   description: [
-    "WPC (Wood Polymer Composite) digital shutters are a modern and innovative solution for window coverings, combining the durability and low maintenance of WPC material with the versatility of digital printing technology. These shutters are made from a composite of wood fibers and plastic polymers, resulting in a strong, weather-resistant product that is ideal for both interior and exterior use.",
+    "WPC (Wood-Plastic Composite) digital print shutters are a modern and innovative solution for interior and modular furniture design. These shutters combine the durability of WPC material with high-definition digital printing, allowing for unlimited customization in terms of textures, patterns, and themes.",
     ,
   ],
   specs: [
@@ -478,12 +476,28 @@ export const products = [
         text: "Size: 8ft x 4ft",
       },
   ],
-  frames: [
-    { src: "/Hdpc-options.jpg",
-      width: 400, 
-      height: 300,
-     },
+  specs1:[
+    {
+        text: "Quick installation",
+      },
+      {
+        text: "Maintenance-free",
+      },
+      {
+        text: "Stylish + functional",
+      },
+      {
+        text: "100% customizable",
+
+      },
+      {
+        text: "Perfect fit for premium interiors",
+
+      },
   ],
+  frames: [
+  ],
+  pdf: "/pdfs/WPC-3D-BOARDS.pdf",
   bottomImage: "",
   },
   {
@@ -496,7 +510,7 @@ export const products = [
       available: "Available Sizes:",
     },
   description: [
-    "We manufacture the complete HDPC range – including door leaves, frames, windows, and architraves – all under one roof. This ensures consistent quality and allows you to conveniently source everything you need directly from our factory. WPC, short for Wood Polymer Composite, is an advanced material made by impregnating wood fibers with polymers, which are then polymerized to enhance performance for specific applications like doors, windows, frames, cornices, and decking. The resulting mixture, with a thick consistency, is extruded or molded into desired profiles."
+    "HDPC Board (High Density Polymer Composite Boards) are next-generation building materials designed to outperform traditional wood and plywood. Made from a blend of high-density polymers and natural fibers, these sheets offer exceptional durability, versatility, and aesthetic flexibility — making them ideal for both interior and exterior applications."
     ,
   ],
   specs: [
@@ -560,7 +574,7 @@ export const products = [
       frame: "Finish Options:",
     },
   description: [
-    "Enhance your building facade with WPC (Wood-Plastic Composite) Exterior Louvers — the perfect fusion of natural wood aesthetics and modern engineering. These louvers not only elevate architectural design but also offer long-lasting performance against weather, UV rays, and moisture."
+    "Enhance your building’s facade with WPC (Wood-Plastic Composite) Exterior Louvers — the perfect fusion of natural wood aesthetics and modern engineering. These louvers not only elevate architectural design but also offer long-lasting performance against weather, UV rays, and moisture."
     ,
   ],
   specs: [
@@ -595,7 +609,7 @@ export const products = [
   ],
   frames: [
     { src: "/Options.png",
-      width: 400, 
+      width: 390, 
       height: 300,
      },
   ],
@@ -608,13 +622,11 @@ export const products = [
   headings: {
       presenting: "PRESENTING",
       technical: "Key Features:",
-      frame: "Available Sizes:",
+      available: "Available Sizes:",
+      technical3: "Note:",
     },
   description: [
-    "WPC Digital Louvers are a modern and innovative solution for window coverings, combining the durability and low maintenance of WPC (Wood Polymer Composite) material with the versatility of digital printing technology. These louvers are made from a composite of wood fibers and plastic polymers, resulting in a strong, weather-resistant product that is ideal for both interior and exterior use.",
-    "The standout feature of WPC digital louvers is their ability to be customized with high-resolution digital prints. This allows for a wide range of design options, from realistic wood grain patterns to vibrant colors and intricate designs, enabling homeowners and designers to achieve a unique aesthetic that complements their space.",
-    "Ideal for both residential and commercial applications, WPC digital louvers offer excellent resistance to moisture, termites, and warping, making them a low-maintenance and long-lasting choice for modern living spaces.",
-    ,
+    "Bring interiors to life with WPC Digital Customised Louvers — an innovative solution that combines the aesthetic freedom of high-resolution digital printing with the practicality of wood-plastic composite. Perfect for wall accents, partitions, or ceiling panels, these louvers allow fully customizable prints to match any interior theme — from minimal and modern to rich and traditional.",
   ],
   specs: [
     {
@@ -651,18 +663,39 @@ specs1: [
 
       },
   ],
+  specs2: [
+    
+      {
+         text:"",
+        image: "/Digital-louvers.png",
+        width: 300,
+        height: 200,
+
+      },
+      
+  ],
+  specs3: [
+      {
+        text:"Close up photographs suggested only for",
+      },
+      {
+        text:"Close up photographs suggested only for",
+      },
+      {
+        text:"Close up photographs suggested only for",
+      },
+      {
+        text:"Close up photographs suggested only for",
+      },
+  ],
   frames: [
-    { src: "/Digital-louvers.png",
-      width: 400, 
-      height: 300,
-     },
   ],
   bottomImage: "",
   },
   {
     id: 9,
   name: "WPC EXTERIOR PILLERS",
-  heroImage: "/Exterior-pillars.png",
+  heroImage: "/Exterior-Pillers.png",
   headings: {
       presenting: "PRESENTING",
       available: "Available Sizes:",
@@ -670,27 +703,20 @@ specs1: [
       
     },
   description: [
-    "We concept WPC (Wood Polymer Composite) Exterior Pillars are a perfect blend of natural wood aesthetics and modern durability, designed to enhance the architectural appeal of any outdoor space. These pillars are crafted from a high-density composite material that combines wood fibers with durable plastic polymers, resulting in a product that is both strong and resistant to environmental factors.",
-    "The exterior pillars feature a realistic wood grain finish that adds warmth and elegance to patios, porches, garden structures, and entryways. Available in various styles and sizes, WPC exterior pillars can seamlessly complement different architectural designs, from classic to contemporary.",
-    "In addition to their aesthetic appeal, these pillars are also practical, offering excellent resistance to moisture, termites, and warping. Easy to install and maintain, WPC exterior pillars provide a long-lasting solution for enhancing the beauty and functionality of your outdoor living spaces.",
-    ,
+    "We Concept is a leading manufacturer specializing in high-density WPC (Wood Plastic Composite) window frames and shutters, offering durable, eco-friendly, and aesthetically superior alternatives to traditional wood and uPVC systems. Our WPC products are engineered for strength, longevity, and weather resistance, making them ideal for both residential and commercial applications.",
+    "Crafted using a precision mix of wood fibers and high-performance polymers, our window frames and shutters combine the natural look of wood with the durability of advanced composites. We Concept’s solutions are moisture-proof, termite-resistant, low maintenance, and sustainable, aligning with modern green building standards. With a focus on innovation, quality, and customer satisfaction, We Concept delivers products that perform reliably in harsh climatic conditions while enhancing the architectural appeal of any space.",
   ],
   specs: [
   ],
   specs1: [
-    {
-        text: "Length: 10 feet",
-      },
-      {
-        text: "Width: 5.9 inch",
-      },
-      {
-        text: "Depth: 1.9 inch",
-      },
   ],
   frames: [
+    { src: "/Colour-options.png",
+      width: 390, 
+      height: 300,
+     },
   ],
-  bottomImage: "/Pillar.png",
+  bottomImage: "",
   },
   {
     id: 17,
@@ -699,7 +725,7 @@ specs1: [
   headings: {
       presenting: "PRESENTING",
       technical: "KEY FEATURES",
-      frame: "PVC FILM FINISHES:",
+      frame: "",
     },
   description: [
     "WPC (Wood Polymer Composite) sheets are an innovative material crafted by combining wood fibers with thermoplastics. This unique blend results in a highly durable, eco-friendly, and versatile building solution. WPC sheets are increasingly preferred in modern architecture and interior design due to their aesthetic appeal and functional benefits."
@@ -749,28 +775,50 @@ specs1: [
     
   ],
   frames: [
-    { src: "/R8.png",
-      width: 200, 
-      height: 100,
-     },
-     { src: "/R8-1.png",
-      width: 200, 
-      height: 100,
-     },
-     { src: "/M7-2.png",
-      width: 200, 
-      height: 100,
-     },
-     { src: "/M7-3.png",
-      width: 200, 
-      height: 100,
-     },
-     { src: "/Ceiling-1.png",
-      width: 350, 
-      height: 150,
+    { src: "/Options-final.png",
+      width: 390, 
+      height: 300,
      },
   ],
   bottomImage: "",
+  },
+  {
+    id: 19,
+  name: "INTERIOR WPC LOUVERS ",
+  heroImage: "/WPC-Rafters-poster.png",
+  headings: {
+      presenting: "PRESENTING",
+      technical: "KEY FEATURES",
+      frame: "",
+    },
+  description: [
+    "Elevate your interiors with WPC (Wood Plastic Composite) Louvers — the perfect blend of style, durability, and sustainability. Designed for modern spaces, these louvers bring warmth and texture while offering long-lasting performance with minimal maintenance."
+    ,
+  ],
+  specs: [
+    {
+        text: "Elegant Aesthetic: Natural wood-like finish enhances walls and ceilings, creating a luxurious ambiance.",
+      },
+      {
+        text: "Durable & Water-Resistant: Unlike traditional wood, WPC louvers are resistant to moisture, warping, and termites — ideal for humid environments.",
+      },
+      {
+        text: "Eco-Friendly: Made from recycled wood and plastic, they are a sustainable alternative to traditional timber.",
+      },
+      {
+        text: "Low Maintenance: No need for frequent painting or polishing. Just wipe and enjoy the beauty.",
+      },
+  ],
+   gallery: [
+    { id: "r1", image: "/images/R1.png", pdf: "/pdfs/r1.pdf" },
+    { id: "r2", image: "/images/R2.png", pdf: "/pdfs/r2.pdf" },
+    { id: "r3", image: "/images/R3.png", pdf: "/pdfs/r3.pdf" },
+    { id: "r4", image: "/images/R4.png", pdf: "/pdfs/r4.pdf" },
+    { id: "r5", image: "/images/R5.png", pdf: "/pdfs/r5.pdf" },
+    { id: "r6", image: "/images/R6.png", pdf: "/pdfs/r6.pdf" },
+  ],
+  frames: [
+  ],
   },
 
 ];

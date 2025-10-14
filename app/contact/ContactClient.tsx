@@ -32,7 +32,7 @@ export default function ContactPage() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 bg-white">
       {/* navbar */}
-      <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900 fixed top-0 left-0 w-full z-50 h-16">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -107,7 +107,7 @@ export default function ContactPage() {
 
       {/* Mobile Menu (Slide from Right) */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-purple-900 to-indigo-900 transform ${
+        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] transform ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col items-start pt-20 px-6 text-white shadow-lg md:hidden z-[1000]`}
       >
@@ -136,7 +136,7 @@ export default function ContactPage() {
   </button>
 
   <div
-    className={`mt-2 bg-gradient-to-r from-purple-900 to-indigo-900 text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
+    className={`mt-2 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
       isOpen ? "max-h-96 opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-0"
     }`}
   >

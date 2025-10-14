@@ -67,7 +67,8 @@ const products: Product[] = [
   { id:15 ,name: "WPC DIGITAL RAFTERS", image: "/homepage-icons/DIGITAL-RAFTERS.png" },
   { id:2 ,name: "HDPC SHEETS", image: "/homepage-icons/HDPC-BOARD.png" },
   { id:17 ,name: "WPC SHEETS", image: "/homepage-icons/WPC-BOARD-ICON.png" },
-  { id:18 ,name: "CELING PANEL", image: "/homepage-icons/WPC-RAFTERS.png" },
+  { id:18 ,name: "CELING PANEL", image: "/homepage-icons/CEILING-PANELS.png" },
+  { id:19 ,name: "INTERIOR lOUVERS", image: "/homepage-icons/WPC-RAFTERS.png" },
 ];
 
      const testimonials = [
@@ -90,21 +91,21 @@ const products: Product[] = [
     "/WPC-WINDOW-HOME.PNG",
   ];
 const sections = [
-    {
-      image: "/machinery/1.jpg",
-      title: "",
-      subtitle: "",
-      align: "left",
-    },
-    {
-      image: "/machinery/2.JPG",
-      title: "",
-      subtitle: "",
-      description: "1st time in Andhra Pradesh",
-      align: "left",
-    },
-    {
+  {
       image: "/machinery/3.JPG",
+      title: "",
+      subtitle: "",
+      description: "",
+      align: "right",
+    },
+    {
+      image: "/machinery/1.PNG",
+      title: "",
+      subtitle: "",
+      align: "left",
+    },
+    {
+      image: "/machinery/2.PNG",
       title: "",
       subtitle: "",
       align: "right",
@@ -121,13 +122,14 @@ const sections = [
       subtitle: "",
       align: "right",
     },
+    
   ];
 
 
   return (
     <main className="bg-gray-50 text-gray-900">
       {/* Header */}
-      <header className="flex items-center justify-between px-4 bg-gradient-to-r from-purple-900 to-indigo-900 relative top-0 left-0 w-full z-50 h-16">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] relative top-0 left-0 w-full z-50 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -148,7 +150,7 @@ const sections = [
             />
           </button>
           {isOpen && (
-            <div className="absolute left-0 mt-2 bg-gradient-to-r from-purple-900 to-indigo-900 text-black rounded-lg shadow-lg w-44 z-50">
+            <div className="absolute left-0 mt-2 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18]0 text-black rounded-lg shadow-lg w-44 z-50">
               <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
               <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
               <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
@@ -202,7 +204,7 @@ const sections = [
 
       {/* Mobile Menu (Slide from Right) */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-purple-900 to-indigo-900 transform ${
+        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] transform ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col items-start pt-20 px-6 text-white shadow-lg md:hidden z-[1000]`}
       >
@@ -231,7 +233,7 @@ const sections = [
   </button>
 
   <div
-    className={`mt-2 bg-gradient-to-r from-purple-900 to-indigo-900 text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
+    className={`mt-2 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] text-white rounded-lg shadow-lg w-full z-50 overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
       isOpen ? "max-h-96 opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-0"
     }`}
   >
@@ -305,7 +307,7 @@ const sections = [
         className="px-4 py-8 text-center"
       >
       <h3 className="text-2xl font-bold">
-        <span className="text-purple-600">Store.</span> Gift your home timeless
+        <span className="text-[#6b658d]">Store.</span> Gift your home timeless
         beauty this season.
       </h3>
 
@@ -321,7 +323,7 @@ const sections = [
     Need shopping help?{" "}
     <a
       href="mailto:conceptdoorswindows@gmail.com?subject=Product%20Inquiry%20from%20Website"
-      className="font-semibold text-purple-600 hover:underline"
+      className="font-semibold text-[#6b658d] hover:underline"
     >
       Ask a Specialist
     </a>
@@ -387,7 +389,7 @@ const sections = [
         viewport={{ once: true }}
          className="px-4">
       <h3 className="text-lg font-bold">
-        <span className="text-purple-700">The latest.</span> Discover what’s fresh and timeless
+        <span className="text-[#6b658d]">The latest.</span> Discover what’s fresh and timeless
       </h3>
       <Swiper
         spaceBetween={16}
@@ -429,7 +431,7 @@ const sections = [
         viewport={{ once: true }}
         className="px-4 py-6 bg-gray-50"
       >
-      <h3 className="text-lg font-bold text-purple-700">Customer Voice</h3>
+      <h3 className="text-lg font-bold text-[#6b658d]">Customer Voice</h3>
       
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -522,7 +524,7 @@ const sections = [
 </motion.section> */}
 
       {/* Machinery Section */}
-      <section className="bg-[#0B2041] text-white">
+      <section className="bg-gradient-to-b from-[#6b658d] via-[#2f2852] to-[#080c18] text-white">
       {sections.map((sec, index) => (
         <motion.div
           key={index}
