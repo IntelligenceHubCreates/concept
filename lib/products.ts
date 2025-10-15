@@ -820,5 +820,21 @@ specs1: [
   frames: [
   ],
   },
+  {
+    id: 20,
+  name: "BAFFLES",
+  heroImage: "/BAFFLES.png",
+  description: [
+    ""
+    ,
+  ],
+  specs: [
+    
+    
+  ],
+  frames: [
+    
+  ],
+  },
 
 ];

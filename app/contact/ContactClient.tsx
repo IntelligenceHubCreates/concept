@@ -140,13 +140,13 @@ export default function ContactPage() {
       isOpen ? "max-h-96 opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-0"
     }`}
   >
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</a>
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</a>
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Fluted Panels</a>
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">HDPC Doors & Frames</a>
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</a>
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">Wall Panels</a>
-    <a href="#" className="block px-4 py-2 hover:bg-purple-100">WPC Door & Frames</a>
+   <Link href="/collections/18" className="block px-4 py-2 hover:bg-purple-100">Ceiling Systems</Link>
+    <Link href="/collections/8" className="block px-4 py-2 hover:bg-purple-100">Exterior Louvers</Link>
+    <Link href="/collections/1" className="block px-4 py-2 hover:bg-purple-100">WPC Frame</Link>
+    <Link href="/collections/12" className="block px-4 py-2 hover:bg-purple-100">35MM HDPC Doors & Frames</Link>
+    <Link href="/collections/6" className="block px-4 py-2 hover:bg-purple-100">New Arrivals</Link>
+    <Link href="/collections/3" className="block px-4 py-2 hover:bg-purple-100">3D Boards</Link>
+    <Link href="/collections/11" className="block px-4 py-2 hover:bg-purple-100">WPC UV Textured Door</Link>
   </div>
 </div>
 
