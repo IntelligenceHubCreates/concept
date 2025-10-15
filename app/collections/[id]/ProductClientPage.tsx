@@ -112,7 +112,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
     if (product.id === 20) {
     return (
       <>
-      <header className="flex items-center justify-between px-4 py-10 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
         {/* Logo */}
         <div className="flex items-center">
           <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -234,14 +234,14 @@ export default function ProductClientPage({ product }: { product: Product }) {
             src={product.heroImage}
             alt={product.name}
             fill
-            className="object-contain"
+            className="object-contain z-10 mt-6"
             priority />
         </div></>
     );
   }
   return (
     <main className="bg-gray-50 text-neutral-900">
-      <header className="flex items-center justify-between px-4 py-10 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
+      <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -371,7 +371,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn} 
-        className="relative w-full h-[500px] flex items-center justify-center mt-6 bg-gray-50">
+        className="relative w-full h-[500px] flex items-center justify-center z-10 mt-6 bg-gray-50">
         <Image
           src={product.heroImage}
           alt={product.name}
