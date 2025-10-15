@@ -394,7 +394,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
   <h2 className="text-xl font-semibold text-gray-700 mb-2 text-center">
     {product.headings?.presenting || "PRESENTING"}
   </h2>
-  <h3 className="text-2xl md:text-3xl font-bold text-purple-900 mb-2 text-center">
+  <h3 className="text-2xl md:text-3xl font-bold text-[#26204e] mb-2 text-center">
      {product.name.toUpperCase()}
   </h3>
   {product.description.map((para, i) => (
@@ -402,7 +402,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
       {para}
     </p>
   ))}
-</motion.section>
+      </motion.section>
 
       {/* Technical Specs */}
 {/* Technical Specifications */}
@@ -413,7 +413,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           viewport={{ once: true }}
           variants={fadeUp} className="bg-gray-50 py-2 px-6">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#26204e] mb-4">
         {product.headings?.technical || "Technical Specifications:"}
       </h2>
 
@@ -464,7 +464,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           variants={fadeUp} 
           className="bg-gray-50 py-6 px-6">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#26204e] mb-4">
         {product.headings?.available || "Technical Specifications"}
       </h2>
 
@@ -512,7 +512,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
       className="bg-gray-50 py-2 px-4 ml-6 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
     >
       <div className="max-w-full mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold text-purple-900 ">
+        <h2 className="text-xl md:text-2xl font-bold text-[#26204e] ">
           {product.headings?.technical2}
         </h2>
 
@@ -550,7 +550,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
       className="bg-gray-50 py-2 px-4 w-full sm:w-[48%] md:w-[48%] mb-4 rounded-lg"
     >
       <div className="max-w-full mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold text-purple-900 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-[#26204e] mb-4">
           {product.headings?.technical3}
         </h2>
 
@@ -588,7 +588,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp} className="max-w-6xl mx-auto px-4 py-2">
-    <h2 className="text-2xl md:text-3xl font-bold text-purple-900 ">
+    <h2 className="text-2xl md:text-3xl font-bold text-[#26204e] ">
       {product.headings?.frame}
     </h2>
     <div className="flex flex-wrap justify-center">

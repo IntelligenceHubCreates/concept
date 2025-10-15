@@ -250,7 +250,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-900 to-indigo-900 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
+              className="w-full bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
             >
               Send Message
             </button>
