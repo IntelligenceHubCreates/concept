@@ -71,6 +71,8 @@ type Product = {
     id: string;
     image: string;
     pdf: string;
+    width: number; 
+    height: number;
   }[];
 };
 const fadeUp: Variants = {
@@ -238,7 +240,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
   }
   return (
     <main className="bg-gray-50 text-neutral-900">
-      <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
+      <header className="flex items-center justify-between px-4 py-10 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
@@ -721,7 +723,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
 {product.gallery && product.gallery.length > 0 && (
   <div className="w-full py-10 px-4 flex flex-col items-center">
     {/* Row 1 */}
-    <div className="flex flex-wrap justify-center gap-6 mb-8">
+    <div className="flex flex-wrap justify-center gap-1">
       {product.gallery.slice(0, 3).map((item, index) => (
         <motion.div
           key={item.id}
@@ -730,29 +732,35 @@ export default function ProductClientPage({ product }: { product: Product }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           className="flex flex-col items-center text-center"
+          style={{
+            width: `${item.width}px`,
+            height: `${item.height + 50}px`, // +50 for text space
+          }}
         >
-          <a
-            href={item.pdf}
-            download
-            className={`group relative w-40 h-40 md:w-48 md:h-48 overflow-hidden  hover:scale-105 transition-transform
+          <div
+            className={`relative overflow-hidden group transition-transform hover:scale-105
               ${index % 2 === 0 ? "rounded-l-[30px]" : "rounded-r-[30px]"}`}
+            style={{
+              width: `${item.width}px`,
+              height: `${item.height}px`,
+            }}
           >
             <Image
               src={item.image}
               alt={item.id}
               fill
-              className="object-cover bg-gray-50"
+              className="object-contain bg-gray-50"
             />
-          </a>
-          <p className="mt-2 text-gray-700 font-semibold font-serif italic text-lg">
+          </div>
+          <p className="mt-1 text-sm md:text-base font-semibold text-gray-800">
             {item.id.toUpperCase()}
           </p>
         </motion.div>
       ))}
     </div>
 
-    {/* Row 2 (slightly staggered / offset look) */}
-    <div className="flex flex-wrap justify-center gap-6 md:mt-[-20px]">
+    {/* Row 2 (staggered layout) */}
+    <div className="flex flex-wrap justify-center gap-1 ">
       {product.gallery.slice(3, 6).map((item, index) => (
         <motion.div
           key={item.id}
@@ -761,21 +769,27 @@ export default function ProductClientPage({ product }: { product: Product }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           className="flex flex-col items-center text-center"
+          style={{
+            width: `${item.width}px`,
+            height: `${item.height + 50}px`,
+          }}
         >
-          <a
-            href={item.pdf}
-            download
-            className={`group relative w-40 h-40 md:w-48 md:h-48 overflow-hidden hover:scale-105 transition-transform
+          <div
+            className={`relative overflow-hidden group transition-transform hover:scale-105
               ${index % 2 === 0 ? "rounded-r-[30px]" : "rounded-l-[30px]"}`}
+            style={{
+              width: `${item.width}px`,
+              height: `${item.height}px`,
+            }}
           >
             <Image
               src={item.image}
               alt={item.id}
               fill
-              className="object-cover bg-gray-50"
+              className="object-contain bg-gray-50"
             />
-          </a>
-          <p className="mt-2 text-gray-700 font-semibold font-serif italic text-lg">
+          </div>
+          <p className="mt-1 text-sm md:text-base font-semibold text-gray-800">
             {item.id.toUpperCase()}
           </p>
         </motion.div>
@@ -787,6 +801,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
 
 
+
       {/* Video Section */}
       {/* Media Section (Video or Image) */}
 {(product.video || product.bottomImage) && (
@@ -794,7 +809,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
           initial="hidden"
           whileInView="visible"
           variants={fadeUp}
-          viewport={{ once: true }} className="bg-gradient-to-b from-purple-900 to-indigo-900 py-6">
+          viewport={{ once: true }} className="bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] py-6">
     <div className="max-w-4xl mx-auto px-6 text-center">
       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
         {product.video ? (

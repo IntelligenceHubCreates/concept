@@ -68,7 +68,7 @@ export const products = [
       width: 210, 
       height: 100,
      },
-    { src: "/frame-8.png",
+    { src: "/frame-8.PNG",
       width: 90, 
       height: 100,
      },
@@ -191,7 +191,7 @@ export const products = [
       height: 100,
      },
   ],
-  bottomImage: "/Ceiling-2.png",
+  video:""
   },
   {
     id: 10,
@@ -503,7 +503,7 @@ export const products = [
   {
     id: 2,
   name: "HDPC SHEETS",
-  heroImage: "/HDPC-BOARD.JPG",
+  heroImage: "/HDPC-BOARD.jpg",
   headings: {
       presenting: "PRESENTING",
       technical: "Key Features",
@@ -810,12 +810,12 @@ specs1: [
       },
   ],
    gallery: [
-    { id: "r1", image: "/images/R1.png", pdf: "/pdfs/r1.pdf" },
-    { id: "r2", image: "/images/R2.png", pdf: "/pdfs/r2.pdf" },
-    { id: "r3", image: "/images/R3.png", pdf: "/pdfs/r3.pdf" },
-    { id: "r4", image: "/images/R4.png", pdf: "/pdfs/r4.pdf" },
-    { id: "r5", image: "/images/R5.png", pdf: "/pdfs/r5.pdf" },
-    { id: "r6", image: "/images/R6.png", pdf: "/pdfs/r6.pdf" },
+    { id: "r1", image: "/images/R1.png", pdf: "/pdfs/r1.pdf", width: 90, height: 100, },
+    { id: "r2", image: "/images/R2.png", pdf: "/pdfs/r2.pdf", width: 90, height: 100, },
+    { id: "r3", image: "/images/R3.png", pdf: "/pdfs/r3.pdf", width: 160, height: 100, },
+    { id: "r6", image: "/images/R6.png", pdf: "/pdfs/r6.pdf", width: 150, height: 150, },
+    { id: "r4", image: "/images/R4.png", pdf: "/pdfs/r4.pdf", width: 90, height: 100, },
+    { id: "r5", image: "/images/R5.png", pdf: "/pdfs/r5.pdf", width: 90, height: 100, },
   ],
   frames: [
   ],
