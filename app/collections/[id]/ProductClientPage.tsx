@@ -111,7 +111,8 @@ export default function ProductClientPage({ product }: { product: Product }) {
     }, []);
     if (product.id === 20) {
     return (
-      <><header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
+      <>
+      <header className="flex items-center justify-between px-4 py-10 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] fixed top-0 left-0 w-full z-50 h-16">
         {/* Logo */}
         <div className="flex items-center">
           <Image src="/logo.PNG" alt="Concept logo" width={120} height={40} />
