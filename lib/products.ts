@@ -68,7 +68,7 @@ export const products = [
       width: 210, 
       height: 100,
      },
-    { src: "/frame-8.PNG",
+    { src: "/FRAME-8.png",
       width: 90, 
       height: 100,
      },
