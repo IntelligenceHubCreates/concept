@@ -232,7 +232,7 @@ export const products = [
   frames: [
   ],
   bottomImage: "/ANTIQ-GROOVE-DOOR-poster.png",
-   pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
+   pdf: "/pdfs/pdfs/WPC-ANTIQ-DOOR.pdf",
   },
   {
     id: 14,
@@ -271,7 +271,7 @@ export const products = [
   ],
   frames: [
   ],
-  pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
+  pdf: "/pdfs/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
   bottomImage: "",
   },
   {
@@ -317,8 +317,8 @@ export const products = [
   ],
   frames: [
   ],
-  pdf: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
-  pdf2: "/pdfs/WPC-DIGITAL-DOOR-CONCEPT.pdf",
+  pdf: "/pdfs/pdfs/WPC-GROOVING-DOOR-SINGLE.pdf",
+  pdf2: "/pdfs/pdfs/WPC-GROOVING-DOOR-DOUBLE.pdf",
   bottomImage: "",
   },
   {
@@ -400,7 +400,7 @@ export const products = [
   ],
   frames: [
   ],
-  pdf: "/pdfs/WPC-3D-BOARDS.pdf",
+  pdf: "/pdfs/pdfs/3D_Boards.pdf",
   bottomImage: "",
   },
   {
@@ -443,7 +443,7 @@ export const products = [
   ],
   frames: [
   ],
-  pdf: "/pdfs/WPC-3D-BOARDS.pdf",
+  pdf: "/pdfs/pdfs/POLYGRANITE-SHEETS.pdf",
   bottomImage: "",
   },
   {
@@ -497,7 +497,7 @@ export const products = [
   ],
   frames: [
   ],
-  pdf: "/pdfs/WPC-3D-BOARDS.pdf",
+  pdf: "/pdfs/pdfs/VOL_1_DIGITAL-SHUTTERS.pdf",
   bottomImage: "",
   },
   {
@@ -561,6 +561,7 @@ export const products = [
   ],
   frames: [
   ],
+  pdf: "/pdfs/pdfs/CONCEPT-HDPC-BOARD.pdf",
   bottomImage: "/WPC-WARDROBE.png",
   },
   {
@@ -613,6 +614,7 @@ export const products = [
       height: 300,
      },
   ],
+  pdf: "/pdfs/pdfs/EXTERIOR-LOUVERS.pdf",
   bottomImage: "",
   },
   {
