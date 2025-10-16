@@ -185,14 +185,14 @@ export default function ContactPage() {
               <Mail className="w-5 h-5 text-blue-600" />
               <p className="text-gray-700">support@concept.com</p>
             </div>
-            <div className="flex items-center gap-3">
+           {/*} <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-blue-600" />
               <p className="text-gray-700">+91 98765 43210</p>
-            </div>
+            </div> */}
             <div className="flex items-center gap-3">
               <MapPin className="w-5 h-5 text-blue-600" />
               <p className="text-gray-700">
-                Concept Pvt. Ltd, Guntur, Andra Pradesh, India
+                Concept Pvt. Ltd, Morbi - 363630, Gujrat, India
               </p>
             </div>
           </div>
