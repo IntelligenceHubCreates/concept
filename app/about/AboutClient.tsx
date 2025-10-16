@@ -156,7 +156,7 @@ export default function AboutPage() {
       </div>
     </header>
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white">
+      <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-b from-[#6b658d] via-[#2f2852] to-[#080c18] text-white">
         <div className="absolute inset-0">
           <Image
             src="/Option-2.jpg"

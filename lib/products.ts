@@ -363,6 +363,11 @@ export const products = [
     id: 3,
   name: "3D WPC BOARDS ",
   heroImage: "/WPC-3d-boards.png",
+  sliderImages: [
+    "/3D-BOARDS-1.png",
+    "/3D-BOARDS-2.png",
+    "/3D-BOARDS-3.png",
+  ],
   headings: {
       presenting: "PRESENTING",
       technical: "key Features:",

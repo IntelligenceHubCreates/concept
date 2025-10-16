@@ -38,6 +38,7 @@ type Spec2 = {
   width?: number; 
   height?: number;
 };
+type SliderImage = string;
 
 type Spec3 = {
   text: string;
@@ -74,6 +75,7 @@ type Product = {
     width: number; 
     height: number;
   }[];
+  sliderImages?: SliderImage[];
 };
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -384,6 +386,50 @@ export default function ProductClientPage({ product }: { product: Product }) {
           </h1>
         </div>*/}
       </motion.section>
+
+      {/* Slider Image Section */}
+
+      {product.sliderImages && product.sliderImages.length > 0 && (
+  <div className="w-full flex justify-center py-6">
+    <div className="flex gap-4 overflow-x-auto px-4 scrollbar-hide">
+      {product.sliderImages.map((img, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: index * 0.1 }}
+          className="relative w-32 h-32 md:w-64 md:h-64 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
+        >
+          <Image
+            src={img}
+            alt={`Product slide ${index + 1}`}
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+      ))}
+
+      {/* Optional Arrow Icon */}
+      <div className="flex items-center justify-center w-10">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8 text-yellow-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+)}
+
 
       {/* Presenting Section */}
       <motion.section
