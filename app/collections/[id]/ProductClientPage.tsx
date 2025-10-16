@@ -46,6 +46,12 @@ type Spec3 = {
   width?: number; 
   height?: number;
 };
+type Spec4 = {
+  text: string;
+  image?: string; // optional image for some specs
+  width?: number; 
+  height?: number;
+};
 
 
 type Product = {
@@ -62,6 +68,7 @@ type Product = {
   specs1?: Spec1[];
   specs2?: Spec2[];
   specs3?: Spec3[];
+  specs4?: Spec4[];
   pdf?: string;
   pdf2?: string;
   pdf3?: string;
@@ -587,6 +594,43 @@ export default function ProductClientPage({ product }: { product: Product }) {
     </motion.section>
   )}
 
+  {product.specs4 && product.specs4.length > 0 && (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeUp}
+      className="bg-gray-50 py-2 px-4 w-full sm:w-[48%] md:w-[48%] rounded-lg"
+    >
+      <ul className="text-gray-800">
+        <h2 className="text-xl md:text-2xl font-bold text-[#26204e]">
+          {product.headings?.technical3}
+        </h2>
+        <div className="flex items-start last:border-none">
+          {product.specs4.map((spec, i) => (
+            <li key={i} className="flex items-start gap-4 pb-1 last:border-none">
+              {/*<span className="w-1 h-1 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>*/}
+              <div className="flex flex-col md:flex-row md:items-center w-full">
+                <p className="flex-1 text-xs leading-snug">{spec.text}</p>
+                {spec.image && (
+                  <div className="relative flex-shrink-0">
+                    <Image
+                      src={spec.image}
+                      alt={`Specification image ${i + 1} for ${product.name}`}
+                      width={spec.width || 200}
+                      height={spec.height || 120}
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
+        </div>
+      </ul>
+    </motion.section>
+  )}
+
   {product.specs3 && product.specs3.length > 0 && (
     <motion.section
       initial="hidden"
@@ -606,7 +650,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
               <span className="w-1 h-1 bg-gray-800 rounded-full mt-2 flex-shrink-0"></span>
               <div className="flex flex-col md:flex-row md:items-center w-full">
                 <p className="flex-1 text-xs leading-snug">{spec.text}</p>
-                {spec.image && (
+                {/*{spec.image && (
                   <div className="relative flex-shrink-0">
                     <Image
                       src={spec.image}
@@ -616,7 +660,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
                       className="object-contain"
                     />
                   </div>
-                )}
+                )}*/}
               </div>
             </li>
           ))}
@@ -624,6 +668,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
       </div>
     </motion.section>
   )}
+  
 </div>
 
 

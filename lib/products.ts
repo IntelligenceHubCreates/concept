@@ -148,7 +148,7 @@ export const products = [
       },
       
   ],
-  specs3: [
+  specs4: [
       {
         text:"",
         image: "/SPECIFICATION .png",
