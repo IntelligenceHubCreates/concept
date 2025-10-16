@@ -371,7 +371,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn} 
-        className="relative w-full h-[500px] flex items-center justify-center z-10 mt-6 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18]">
+        className="relative w-full h-[500px] flex items-center justify-center z-10 mt-6 bg-gradient-to-b from-[#6b658d] via-[#2f2852] to-[#080c18]">
         <Image
           src={product.heroImage}
           alt={product.name}
