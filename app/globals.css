@@ -56,5 +56,5 @@ body {
   height: 80px;
   background: linear-gradient(to top, #2e1745, #6b658d);
   filter: blur(6px);
-  z-index: 5; /* ensures it sits above gallery background */
+  /* ensures it sits above gallery background */
 }
