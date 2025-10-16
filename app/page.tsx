@@ -430,7 +430,7 @@ const sections = [
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="px-4 py-6 bg-gray-50"
+        className="px-4 py-6 bg-gray-50 transition-fade"
       >
       <h3 className="text-lg font-bold text-[#6b658d]">Customer Voice</h3>
       
@@ -525,7 +525,7 @@ const sections = [
 </motion.section> */}
 
       {/* Machinery Section */}
-      <section className="bg-gradient-to-b from-[#6b658d] via-[#2f2852] to-[#080c18] text-white">
+      <section className="bg-gradient-to-b from-[#6b658d] via-[#2f2852] to-[#080c18] text-white transition-fade-top">
       {sections.map((sec, index) => (
         <motion.div
           key={index}
