@@ -231,7 +231,7 @@ Specializing in designer doors, modern groove patterns, decorative finishes, and
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 px-12 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] text-white text-center">
+      <section className="py-16 px-12 bg-gradient-to-b from-[#6b658d] via-[#2f2852] to-[#080c18] text-white text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Let&apos;s Build Something Beautiful Together
         </h2>
