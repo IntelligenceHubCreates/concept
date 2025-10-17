@@ -18,9 +18,9 @@ export default function QRVerification() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-10 overflow-hidden bg-gradient-to-b from-white via-purple-50 to-[#2e1745] transition-fade">
+    <div className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-10 overflow-hidden bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] transition-fade">
       {/* Soft gradient overlay for smooth blending */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-100/40 to-[#2e1745]/80 opacity-80"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#6b658d] via-[#2f2852]/40 to-[#080c18]/80 opacity-80"></div>
 
       {/* Main content */}
       <div className="relative z-10 max-w-2xl mx-auto text-gray-900">
@@ -36,7 +36,7 @@ export default function QRVerification() {
 
         <button
           onClick={handleViewCertificate}
-          className="bg-gradient-to-r from-[#2e1745] to-purple-700 hover:from-purple-700 hover:to-[#2e1745]
+          className="bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] hover:from-purple-700 hover:to-[#2e1745]
                      text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
         >
           📄 View Certificate
