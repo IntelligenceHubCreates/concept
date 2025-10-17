@@ -35,11 +35,12 @@ export default function Home() {
 // 🧱 Sample Data (replace with your real product array or fetch dynamically)
 const productsss: Product[] = [
   { id: 4, name: "WPC Windows", image: "/WPCWindows.PNG" },
-  { id: 1, name: "WPC Frame", image: "/WPCFRAME.jpg" },
-  { id: 10, name: "Antique Grooving Door", image: "/Antique-grooving-door.png" },
-  { id: 15, name: "Digital Louvers", image: "/Digital-louvers.png" },
+  { id: 1, name: "WPC Frame", image: "/WPCFRAME.png" },
+  { id: 10, name: "Antique Grooving Door", image: "/WPC-ANTIQ-DOOR.png" },
+  { id: 15, name: "Digital Louvers", image: "/WPC-DIGITAL-LOUVERS.png" },
   { id: 11, name: "UV Texture Door", image: "/UV-TEXTURE-DOOR.jpg" },
-  { id: 3, name: "WPC 3D Boards", image: "/WPC-3d-boards.png" },
+  { id: 6, name: "POLYGRANITE SHEETS", image: "/POLYGRANITE-SHEETS.png" },
+  { id: 3, name: "WPC 3D Boards", image: "/WPC-3D-BOARD.png" },
 ];
     
 

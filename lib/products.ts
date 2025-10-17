@@ -18,7 +18,7 @@ export const products = [
         text: "Material: Wood fiber + HDPE polymer",
       },
       {
-        text: "Density: > 0.85 g/cm³",
+        text: "Density: > 1.2 g/cm³",
       },
       {
         text: "Termite & rot resistant",
