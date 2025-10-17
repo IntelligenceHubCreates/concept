@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 type FAQ = {
   question: string;
@@ -46,6 +48,33 @@ const faqs: FAQ[] = [
       "Yes. WPC, HDPC, and Polygranite products are eco-friendly alternatives to traditional wood, helping reduce deforestation while offering long-lasting performance.",
   },
 ];
+type Product = {
+  name: string;
+  image: string;
+  id: number;
+};
+const products: Product[] = [
+  { id:1 ,name: "WPC FRAMES", image: "/homepage-icons/WPC-FRAME.png" },
+  { id:4 ,name: "WPC WINDOWS", image: "/homepage-icons/WPC-WINDOW.png" },
+  { id:5 ,name: "WPC DOOR", image: "/homepage-icons/WPC-DOOR.png" },
+  { id:16 ,name: "HDPC DOOR", image: "/homepage-icons/HDPC-DOOR.png" },
+  { id:12 ,name: "35MM HDPC", image: "/homepage-icons/35MM-HDPC-DOOR.png" },
+  { id:14 ,name: "DIGITAL DOOR", image: "/homepage-icons/DIGITAL-DOOR.png" },
+  { id:7 ,name: "GROOVE DOOR", image: "/homepage-icons/GROOVE-DOOR.png" },
+  { id:10 ,name: "ANTIQUE GROOVE DOOR", image: "/homepage-icons/ANTIQ-DOOR.png" },
+  { id:11 ,name: "TEXTURED DOOR", image: "/homepage-icons/TEXTURE-DOOR.png" },
+  { id:13 ,name: "WPC DIGITAL SHUTTLE", image: "/homepage-icons/DIGITAL-SHUTTLES.png" },
+  { id:6 ,name: "POLYGRANITE SHEETS", image: "/homepage-icons/POLYGRANITE-SHEETS.png" },
+  { id:3 ,name: "3D WPC BOARD", image: "/homepage-icons/3D-BOARD-ICON.png" },
+  { id:8 ,name: "EXTERIOR LOUVERS", image: "/homepage-icons/EXTERIOR-LOUVERS.png" },
+  { id:9 ,name: "EXTERIOR PILLERS", image: "/homepage-icons/WPC-PILLARS-ICON.png" },
+  { id:15 ,name: "WPC DIGITAL RAFTERS", image: "/homepage-icons/DIGITAL-RAFTERS.png" },
+  { id:2 ,name: "HDPC SHEETS", image: "/homepage-icons/HDPC-BOARD.png" },
+  { id:17 ,name: "WPC SHEETS", image: "/homepage-icons/WPC-BOARD-ICON.png" },
+  { id:18 ,name: "CELING PANEL", image: "/homepage-icons/CEILING-PANELS.png" },
+  { id:19 ,name: "INTERIOR lOUVERS", image: "/homepage-icons/WPC-RAFTERS.png" },
+  { id:20 ,name: "BAFFLES", image: "/homepage-icons/BAFFLES.png" }, 
+];
 
 export default function FAQClient() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -68,6 +97,30 @@ export default function FAQClient() {
         document.removeEventListener("mousedown", handleClickOutside);
       };
     }, []);
+    const [query, setQuery] = useState("");
+      const [results, setResults] = useState<Product[]>([]);
+       const [open, setOpen] = useState(false);
+      const router = useRouter();
+    
+     const handleSearch = (value: string) => {
+        setQuery(value);
+        if (!value.trim()) {
+          setResults([]);
+          return;
+        }
+        const filtered = products.filter((product) =>
+          product.name.toLowerCase().includes(value.toLowerCase())
+        );
+        setResults(filtered);
+      };
+    
+       const handleSelect = (id: number) => {
+        setOpen(false);
+        setQuery("");
+        router.push(`/collections/${id}`);
+      };
+  
+
 
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
@@ -113,13 +166,108 @@ export default function FAQClient() {
       {/* Icons + Mobile Menu Button */}
       <div className="flex items-center gap-4 text-white">
         {/* Search button */}
-        <button aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-              d="M21 21l-4.35-4.35M16.65 10.5a6.15 6.15 0 11-12.3 0 6.15 6.15 0 0112.3 0z" />
-          </svg>
-        </button>
+        <div className="relative">
+      {/* 🔘 Search Icon Button */}
+      <button
+        aria-label="Search"
+        onClick={() => setOpen(true)}
+        className="text-white hover:text-purple-700 p-2 rounded-full transition"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M21 21l-4.35-4.35M16.65 10.5a6.15 6.15 0 11-12.3 0 6.15 6.15 0 0112.3 0z"
+          />
+        </svg>
+      </button>
+
+      {/* 🔍 Fullscreen Overlay */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed inset-0 bg-white/80 backdrop-blur-md z-50 flex flex-col items-center justify-start pt-16 px-4 sm:px-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {/* ✖ Close Button */}
+            <button
+              onClick={() => {
+                setOpen(false);
+                setQuery("");
+                setResults([]);
+              }}
+              className="absolute top-6 right-6 text-gray-600 hover:text-purple-700 text-2xl"
+              aria-label="Close Search"
+            >
+              ✕
+            </button>
+
+            {/* 🧠 Input Field */}
+            <div className="w-full max-w-lg flex items-center border border-gray-300 rounded-full bg-white px-4 py-2 shadow-sm">
+              <input
+                type="text"
+                placeholder="Search for products..."
+                value={query}
+                onChange={(e) => handleSearch(e.target.value)}
+                className="flex-1 outline-none bg-transparent text-gray-800 text-base sm:text-lg"
+                autoFocus
+              />
+              <button
+                onClick={() => handleSearch(query)}
+                className="text-gray-600 hover:text-purple-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-4.35-4.35M16.65 10.5a6.15 6.15 0 11-12.3 0 6.15 6.15 0 0112.3 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* 📋 Search Results */}
+            <div className="w-full max-w-lg mt-6 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+              {query && results.length === 0 && (
+                <p className="text-center py-6 text-gray-500 text-sm">
+                  No products found.
+                </p>
+              )}
+              {results.length > 0 && (
+                <ul className="max-h-[60vh] overflow-y-auto divide-y divide-gray-100">
+                  {results.map((product) => (
+                    <li
+                      key={product.id}
+                      onClick={() => handleSelect(product.id)}
+                      className="px-5 py-3 text-gray-800 hover:bg-purple-100 cursor-pointer text-base sm:text-lg"
+                    >
+                      {product.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
 
         {/* Mobile Hamburger */}
         <button
