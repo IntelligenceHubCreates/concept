@@ -1,21 +1,37 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function QRVerification() {
   const router = useRouter();
+  const [showMessage, setShowMessage] = useState(false);
 
-  // Auto-redirect to homepage after 10 seconds
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/");
-    }, 10000);
-    return () => clearTimeout(timer);
+    const hasSeenMessage = sessionStorage.getItem("hasSeenQRMessage");
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Show message only if first-time visit AND mobile device
+    if (!hasSeenMessage && isMobile) {
+      setShowMessage(true);
+      sessionStorage.setItem("hasSeenQRMessage", "true");
+
+      // Auto-redirect after 10 seconds
+      const timer = setTimeout(() => {
+        router.push("/");
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    } else {
+      // Immediate redirect for desktop or repeat visitors
+      router.replace("/"); // replace to avoid adding history entry
+    }
   }, [router]);
 
   const handleViewCertificate = () => {
     window.open("/certificate.pdf", "_blank"); // Replace with your actual link
   };
+
+  if (!showMessage) return null; // Don't render anything if message shouldn't show
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-10 overflow-hidden bg-white transition-fade">
