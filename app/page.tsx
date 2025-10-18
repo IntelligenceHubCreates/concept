@@ -155,7 +155,7 @@ const sections = [
 
   return (
     <><QRMessage />
-    <main id="actual-home" className="bg-gray-50 text-gray-900">
+    <main className="bg-gray-50 text-gray-900">
       {/* Header */}
       <header className="flex items-center justify-between px-4 bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] relative top-0 left-0 w-full z-50 h-16">
         {/* Logo */}

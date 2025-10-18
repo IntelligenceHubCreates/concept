@@ -18,7 +18,7 @@ export default function QRVerification() {
       // Auto-redirect after 10 seconds
       const timer = setTimeout(() => {
         router.push("/");
-      }, 10000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     } else {
