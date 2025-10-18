@@ -29,10 +29,10 @@ export default function QRVerification() {
 
       // Redirect after 10 seconds
       timeoutRef.current = window.setTimeout(() => {
-        router.push("/");
+        router.push("/concept");
       }, 10000);
     } else {
-      router.replace("/"); // redirect immediately for desktop or repeat visits
+      router.replace("/concept"); // redirect immediately for desktop or repeat visits
     }
 
     // Cleanup on unmount
