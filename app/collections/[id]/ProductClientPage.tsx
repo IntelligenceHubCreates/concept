@@ -49,6 +49,7 @@ type Headings = {
   technical3?: string;
   frame?: string;
   available?: string;
+  gallery?: string;
 };
 
 type Spec = {
@@ -392,14 +393,16 @@ export default function ProductClientPage({ product }: { product: Product }) {
           <Link href="/contact" className="hover:text-purple-300 py-2">Contact</Link>
           <Link href="#" className="hover:text-purple-300 py-2">Catalogue</Link>
         </div>
-      </header><div className="w-full h-screen relative">
+      </header>
+      <div className="w-full h-screen relative">
           <Image
             src={product.heroImage}
             alt={product.name}
             fill
             className="object-contain z-10 mt-6"
             priority />
-        </div></>
+        </div>
+        </>
     );
   }
   return (
@@ -552,7 +555,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
       {product.sliderImages && product.sliderImages.length > 0 && (
   <div className="w-full flex justify-center py-6">
-    <div className="flex gap-4 overflow-x-auto px-4 scrollbar-hide">
+    <div className="flex gap-4 overflow-x-auto overflow-y-hidden px-4 scrollbar-hide">
       {product.sliderImages.map((img, index) => (
         <motion.div
           key={index}
@@ -657,10 +660,6 @@ export default function ProductClientPage({ product }: { product: Product }) {
     </div>
   </motion.section>
 )}
-
-
-
-
 
 {/* Available Specifications */}
 {product.specs1 && product.specs1.length > 0 && (
@@ -967,6 +966,14 @@ export default function ProductClientPage({ product }: { product: Product }) {
 
 {/* 🔹 Product Gallery Section */}
 {product.gallery && product.gallery.length > 0 && (
+  <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp} className="max-w-6xl mx-auto px-4 py-2">
+    <h2 className="text-2xl md:text-3xl font-bold text-[#26204e] ">
+      {product.headings?.gallery}
+    </h2>
   <div className="w-full py-10 px-4 flex flex-col items-center">
     {/* Row 1 */}
     <div className="flex flex-wrap justify-center gap-1">
@@ -1042,6 +1049,7 @@ export default function ProductClientPage({ product }: { product: Product }) {
       ))}
     </div>
   </div>
+  </motion.section>
 )}
 
 

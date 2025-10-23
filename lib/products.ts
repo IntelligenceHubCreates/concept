@@ -364,9 +364,18 @@ export const products = [
   name: "3D WPC BOARDS ",
   heroImage: "/WPC-3d-boards.png",
   sliderImages: [
-    "/3D-BOARDS-1.png",
-    "/3D-BOARDS-2.png",
-    "/3D-BOARDS-3.png",
+    "/3D-WPC-BOARDS/IMG_1408.jpg",
+    "/3D-WPC-BOARDS/IMG_1409.jpg",
+    "/3D-WPC-BOARDS/IMG_1410.jpg",
+    "/3D-WPC-BOARDS/IMG_1411.jpg",
+    "/3D-WPC-BOARDS/IMG_1412.jpg",
+    "/3D-WPC-BOARDS/IMG_1413.jpg",
+    "/3D-WPC-BOARDS/IMG_1414.jpg",
+    "/3D-WPC-BOARDS/IMG_1415.jpg",
+    "/3D-WPC-BOARDS/IMG_1416.jpg",
+    "/3D-WPC-BOARDS/IMG_1417.jpg",
+    "/3D-WPC-BOARDS/IMG_1418.jpg",
+    "/3D-WPC-BOARDS/IMG_1419.jpg",
   ],
   headings: {
       presenting: "PRESENTING",
@@ -796,7 +805,7 @@ specs1: [
   headings: {
       presenting: "PRESENTING",
       technical: "KEY FEATURES",
-      frame: "",
+      gallery: "Tap The Product Image to view Full Detailed (PDF)",
     },
   description: [
     "Elevate your interiors with WPC (Wood Plastic Composite) Louvers — the perfect blend of style, durability, and sustainability. Designed for modern spaces, these louvers bring warmth and texture while offering long-lasting performance with minimal maintenance."

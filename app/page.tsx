@@ -71,7 +71,7 @@ const products: Product[] = [
   { id:2 ,name: "HDPC SHEETS", image: "/homepage-icons/HDPC-BOARD.png" },
   { id:17 ,name: "WPC SHEETS", image: "/homepage-icons/WPC-BOARD-ICON.png" },
   { id:18 ,name: "CELING PANEL", image: "/homepage-icons/CEILING-PANELS.png" },
-  { id:19 ,name: "INTERIOR lOUVERS", image: "/homepage-icons/WPC-RAFTERS.png" },
+  { id:19 ,name: "INTERIOR LOUVERS", image: "/homepage-icons/WPC-RAFTERS.png" },
   { id:20 ,name: "BAFFLES", image: "/homepage-icons/BAFFLES.png" }, 
 ];
 
