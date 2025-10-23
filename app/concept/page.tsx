@@ -191,7 +191,7 @@ const sections = [
           <a href="#" className="hover:text-purple-300">Gallery</a>
           <Link href="/faqs" className="hover:text-purple-300">FAQs</Link>
           <Link href="/contact" className="hover:text-purple-300">Contact</Link>
-          <Link href="#" className="hover:text-purple-300">Catalogue</Link>
+          <Link href="/catalog" className="hover:text-purple-300">Catalogue</Link>
         </nav>
 
         {/* Icons + Mobile Menu Button */}
