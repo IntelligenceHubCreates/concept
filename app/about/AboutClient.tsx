@@ -397,6 +397,70 @@ Specializing in designer doors, modern groove patterns, decorative finishes, and
           Contact Us
         </a>
       </section>
+      {/* Footer Section */}
+<footer className="bg-gradient-to-b from-[#080c18] via-[#2f2852] to-[#6b658d] text-gray-200 pt-2 pb-6 px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+    {/* Logo and About */}
+    <div>
+      <Image src="/logo.PNG" alt="Concept Logo" width={140} height={50} className="mb-4" />
+      <p className="text-sm leading-relaxed">
+        Concept brings innovation and elegance to your interiors and exteriors.
+        Explore our wide range of WPC and HDPC solutions — built to last, crafted to impress.
+      </p>
+      <div className="flex items-center gap-3 mt-4">
+        <a href="https://www.facebook.com" target="_blank" className="hover:text-white transition">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H17l-.5 3h-2.5v7A10 10 0 0022 12z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/conceptdoorswindows" target="_blank" className="hover:text-white transition">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 4a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.8-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {/* Quick Links */}
+    <div>
+      <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+      <ul className="space-y-2 text-sm">
+        <li><Link href="/" className="hover:text-white transition">Home</Link></li>
+        <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
+        <li><Link href="/catalog" className="hover:text-white transition">Catalogue</Link></li>
+        <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
+      </ul>
+    </div>
+
+    {/* Product Categories */}
+    <div>
+      <h3 className="text-lg font-semibold text-white mb-3">Categories</h3>
+      <ul className="space-y-2 text-sm">
+        <li><Link href="/collections/1" className="hover:text-white transition">WPC Frames</Link></li>
+        <li><Link href="/collections/10" className="hover:text-white transition">Antique Doors</Link></li>
+        <li><Link href="/collections/8" className="hover:text-white transition">Exterior Louvers</Link></li>
+        <li><Link href="/collections/6" className="hover:text-white transition">Polygranite Sheets</Link></li>
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div>
+      <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
+      <ul className="space-y-2 text-sm">
+        <li><span className="font-semibold">Email:</span> conceptdoorswindows@gmail.com</li>
+        <li><span className="font-semibold">Phone:</span> +91 81868 74592</li>
+        <li><span className="font-semibold">Address:</span> Gujrat, India</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
+    © {new Date().getFullYear()} Concept Doors & Windows. All rights reserved. <br className="sm:hidden" />
+    <span className="text-gray-400"> Developed by <span className="text-[#080c18] font-semibold">Intelligence Hub</span></span>
+  </div>
+</footer>
     </main>
   );
 }
