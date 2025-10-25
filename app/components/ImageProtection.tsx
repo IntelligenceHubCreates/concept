@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function ImageProtection() {
   useEffect(() => {
-    // Disable right-click
+    // Disable right-click (desktop)
     const disableRightClick = (e: MouseEvent) => e.preventDefault();
     document.addEventListener("contextmenu", disableRightClick);
 
@@ -23,22 +23,32 @@ export default function ImageProtection() {
     };
     document.addEventListener("keydown", disableKeys);
 
-    // Disable long press on mobile
-    const disableLongPress = (e: TouchEvent) => e.preventDefault();
-    document.addEventListener("touchstart", disableLongPress, { passive: false });
-    document.addEventListener("touchend", disableLongPress, { passive: false });
-    document.addEventListener("touchmove", disableLongPress, { passive: false });
+    // Disable long press only for images (mobile)
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      img.addEventListener("contextmenu", (e) => e.preventDefault());
+      img.addEventListener("touchstart", () => {
+        const timeout = setTimeout(() => {
+          alert("Image protection: saving disabled 🔒");
+        }, 700); // if pressed >700ms = considered long press
+        (img as any)._longPressTimeout = timeout;
+      });
+      img.addEventListener("touchend", () => {
+        clearTimeout((img as any)._longPressTimeout);
+      });
+    });
 
     // Apply image protection CSS + watermark
     const style = document.createElement("style");
     style.innerHTML = `
       img {
-        -webkit-touch-callout: none; /* Disable long press on Safari */
+        -webkit-touch-callout: none; /* Disable long press save */
+        -webkit-user-drag: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        pointer-events: none;
+        pointer-events: auto; /* ✅ Allow clicking/touch */
         position: relative;
       }
 
@@ -74,9 +84,6 @@ export default function ImageProtection() {
       document.removeEventListener("contextmenu", disableRightClick);
       document.removeEventListener("dragstart", disableDrag);
       document.removeEventListener("keydown", disableKeys);
-      document.removeEventListener("touchstart", disableLongPress);
-      document.removeEventListener("touchend", disableLongPress);
-      document.removeEventListener("touchmove", disableLongPress);
       document.head.removeChild(style);
     };
   }, []);
