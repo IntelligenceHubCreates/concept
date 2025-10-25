@@ -409,7 +409,7 @@ export default function FAQClient() {
         Explore our wide range of WPC and HDPC solutions — built to last, crafted to impress.
       </p>
       <div className="flex items-center gap-3 mt-4">
-        <a href="https://www.facebook.com" target="_blank" className="hover:text-white transition">
+        <a href="https://www.facebook.com/share/17dsavZxfp/?mibextid=wwXIfr" target="_blank" className="hover:text-white transition">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H17l-.5 3h-2.5v7A10 10 0 0022 12z" />
           </svg>
@@ -426,7 +426,7 @@ export default function FAQClient() {
     <div>
       <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
       <ul className="space-y-2 text-sm">
-        <li><Link href="/" className="hover:text-white transition">Home</Link></li>
+        <li><Link href="/concept" className="hover:text-white transition">Home</Link></li>
         <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
         <li><Link href="/catalog" className="hover:text-white transition">Catalogue</Link></li>
         <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
