@@ -2,6 +2,11 @@
 
 import { useEffect } from "react";
 
+// Extend HTMLImageElement to safely include _longPressTimeout
+interface ProtectedImage extends HTMLImageElement {
+  _longPressTimeout?: ReturnType<typeof setTimeout>;
+}
+
 export default function ImageProtection() {
   useEffect(() => {
     // Disable right-click (desktop)
@@ -24,21 +29,21 @@ export default function ImageProtection() {
     document.addEventListener("keydown", disableKeys);
 
     // Disable long press only for images (mobile)
-    const images = document.querySelectorAll("img");
+    const images = document.querySelectorAll("img") as NodeListOf<ProtectedImage>;
     images.forEach((img) => {
       img.addEventListener("contextmenu", (e) => e.preventDefault());
       img.addEventListener("touchstart", () => {
         const timeout = setTimeout(() => {
           alert("Image protection: saving disabled 🔒");
-        }, 700); // if pressed >700ms = considered long press
-        (img as any)._longPressTimeout = timeout;
+        }, 700); // Trigger alert if long-pressed >700ms
+        img._longPressTimeout = timeout;
       });
       img.addEventListener("touchend", () => {
-        clearTimeout((img as any)._longPressTimeout);
+        if (img._longPressTimeout) clearTimeout(img._longPressTimeout);
       });
     });
 
-    // Apply image protection CSS + watermark
+    // Apply protection CSS
     const style = document.createElement("style");
     style.innerHTML = `
       img {
@@ -48,11 +53,10 @@ export default function ImageProtection() {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        pointer-events: auto; /* ✅ Allow clicking/touch */
+        pointer-events: auto; /* ✅ Allow clicks/taps */
         position: relative;
       }
 
-      /* 🔒 Watermark overlay */
       img::after {
         content: "© Concept Doors & Windows";
         position: absolute;
@@ -65,7 +69,6 @@ export default function ImageProtection() {
         pointer-events: none;
       }
 
-      /* For Next.js <Image> wrapper containers */
       span[style*="position: relative"]::after {
         content: "© Concept Doors & Windows";
         position: absolute;
