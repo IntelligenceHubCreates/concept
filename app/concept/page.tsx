@@ -371,7 +371,7 @@ const sections = [
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative mt-10"
+        className="relative"
       >
         <Swiper
           modules={[Autoplay]}
@@ -389,7 +389,7 @@ const sections = [
                 alt={`WPC Door ${index + 1}`}
                 width={600}
                 height={200}
-                className="w-full h-[240px] object-cover"
+                className="w-full object-cover"
                 priority={index === 0} />
             </SwiperSlide>
           ))}
