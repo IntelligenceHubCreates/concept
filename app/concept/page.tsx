@@ -389,7 +389,7 @@ const sections = [
                 alt={`WPC Door ${index + 1}`}
                 width={600}
                 height={200}
-                className="w-full h-350px object-cover"
+                className="w-full h-[240px] object-cover"
                 priority={index === 0} />
             </SwiperSlide>
           ))}
