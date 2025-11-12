@@ -733,7 +733,7 @@ const sections = [
             <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li><span className="font-semibold">Email:</span> conceptdoorswindows@gmail.com</li>
-              <li><span className="font-semibold">Address:</span> Gujrat, India</li>
+              <li><span className="font-semibold">Address:</span> Gujarat, India</li>
             </ul>
           </div>
 
