@@ -42,13 +42,6 @@ export default function QRVerification() {
     };
   }, [router]);
 
-  const handleViewCertificate = () => {
-    // Cancel redirect if user opens certificate
-    if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
-    if (intervalRef.current !== null) clearInterval(intervalRef.current);
-    window.open("/certificate.pdf", "_blank");
-  };
-
   // Render nothing until showMessage is true
   if (!showMessage) return null;
 
@@ -71,13 +64,10 @@ export default function QRVerification() {
           </span>
         </p>
 
-        <button
-          onClick={handleViewCertificate}
-          className="bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18] hover:from-purple-700 hover:to-[#2e1745]
-                     text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          📄 View Certificate
-        </button>
+        <p className="bg-gradient-to-t from-[#6b658d] via-[#2f2852] to-[#080c18]
+                     text-white px-8 py-3 rounded-full font-medium shadow-lg inline-block">
+          ✅ This is a genuine product of Concept Doors and Windows.
+        </p>
 
         <p className="mt-6 text-sm text-gray-500 animate-pulse">
           Redirecting to homepage in {countdown} second{countdown !== 1 ? "s" : ""}...
